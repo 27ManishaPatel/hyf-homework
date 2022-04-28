@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+.cv {
+    width: 100%;
+    margin: 50px 200px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: relative;
+}
+.cv .left {
+    position: relative;
+    background: #076d76;
+    padding: 30px;
+}
+.profile {
+    display:flex;
+    flex-direction: column;
+    align-items:  center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+.picture  {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+    overflow: hidden;
+    box-shadow: 7px 7px 7px rgb(2, 86, 66);
+}
+img  {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+}
+.profile h1 {
+    color: azure;
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profile h5 {
+    color: azure;
+    font-size: 0.9em;
+    margin-top: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+.displaybtn {
+    display: flex;
+    flex-direction: row;
+    
+}
+.btn1, .btn2 {
+    color:  rgb(30, 171, 98);
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-decoration: none;
+    padding: 5px;
+    border: 4px double;
+    border-radius: 10px;
+}
+.btn1:hover {
+    font-size: 1.3em;
+}
+.btn2:hover {
+    font-size: 1.3em;
+}
+.btn2 a{
+    color: rgb(30, 171, 98);
+    text-decoration: none;
+}
+.contactinfo {
+    padding-top: 30px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+
+}
+.contactinfo h4 {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;  
+}
+.contactinfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+}
+.contactinfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 20px;
+    color: rgb(116, 165, 149);
+}
+.contactinfo ul li .text {
+    color: rgb(240, 240, 236);
+    text-decoration: none;
+}
+.contactinfo ul li .text a{
+    color: rgb(240, 240, 236);
+    text-decoration: none;
+}
+
+.skills{
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;  
+    padding-bottom: 20px;
+}
+.skills h4 {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.skills ul li{
+    list-style: none;
+}
+.skills ul li .text {
+    display: inline-block;
+    color: rgb(171, 196, 219);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.skills ul li .percent {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background-color: rgb(18, 11, 11);
+    display: block;
+    border-radius: 5px;
+   
+    }
+    
+.skills ul li .percent div {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background-color: rgb(17, 163, 39);
+    display: block;
+    border-radius: 5px;
+    color: rgb(14, 92, 165);
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+    text-shadow: 6px #f2ebe7;
+    }
+
+.refferences h4 {
+        color: aliceblue;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;  
+    }
+.refferences ul li{
+        list-style: none;
+    }
+.refferences ul li  {
+        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-left: 20px;
+        line-height: 25px;
+        font-size:18px;
+    }
+.refferences ul li a { 
+    text-decoration: none;
+    color: aquamarine;
+    
+}
+.refferences ul li a:hover { 
+        text-decoration: none;
+        color: rgb(224, 67, 19);
+        font-size: 20px;
+}
+
+.cv .right {
+    position: relative;
+    background: white;
+    padding: 40px;
+    }
+.cv .right .about{
+    border-bottom: 1px solid #034665; 
+}
+  
+.cv .right .about h4{
+    color: #034665;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(2, 86, 66);
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.cv .right .about h4 i{
+    margin-right: 10px;
+}
+.cv .right .about p{
+    color: #020202;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+    text-align: justify;
+}
+
+.cv .right .work-exp{
+    border-bottom: 1px solid #034665; 
+}
+.cv .right .work-exp h2{
+    color: #034665;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(2, 86, 66);
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.cv .right .work-exp h2 i{
+    margin-right: 10px;
+}
+.cv .right .work-exp h4{
+    color: #5b0365;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.cv .right .work-exp h6{
+    color: #025b85;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 5px;
+    
+}
+.cv .right .work-exp p{
+    color: #020202;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.cv .right .education{
+    border-bottom: 1px solid #034665; 
+}
+
+.cv .right .education h2{
+    color: #034665;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(2, 86, 66);
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.cv .right .education h2 i{
+    margin-right: 10px;
+}
+
+.cv .right .education h4{
+    color: #5b0365;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.cv .right .education h6{
+    color: #025b85;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 5px;
+    
+}
+.cv .right .education p{
+    color: #020202;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 300%;
+    height: 150px;
+    background-color: #d9e6ed;
+}
+.hobbies h4 {
+ 
+    color: #5b0365;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(2, 86, 66);
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    margin-left: 40px; 
+}
+
+.hobbies ul li {
+    text-align: center;
+    display: inline;
+    margin: 20px;
+   
+}
+.hobbies ul li i{
+margin-top: 5px;
+  border: 1px solid black;
+  padding: 13px;
+  border-radius: 50%;
+  color: rgb(37, 88, 199);
+  font-size: 30px; 
+}
+
+.social h4 {
+ 
+    color: #5b0365;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(2, 86, 66);
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    margin-left: 40px; 
+}
+
+.social ul li {
+    display: inline;
+    margin: 20px;
+}
+.social ul li i{
+margin-top: 5px;
+  border: 1px solid black;
+  padding: 13px;
+  border-radius: 50%;
+  color: rgb(37, 88, 199);
+  font-size: 30px; 
+  margin-left: 17px;
+}
+.social ul li i:hover {
+    font-size: 35px;
+}
+
