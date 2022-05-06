@@ -145,9 +145,10 @@
 .section2-right-logo {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     column-gap: 60px;
-    row-gap: 60px;
+    row-gap: 90px;
     justify-content: center;
 }
 /* section 2 left */
@@ -245,7 +246,7 @@ footer{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
         padding: 20px;
-        padding-left: -100px;
+        
         align-content: center;
         display: flex;
         flex-direction: column;
