@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-3 Form-2 HomeWork</title>
+    <link rel="stylesheet" href="main2.css">
+</head>
+
+<body>
+    <!-- I have put two span element Logo and Navigation in header -->
+    <header>
+        <div>
+         <img class="image" src="H&M-Logo.svg" alt="logo" >
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="https://www2.hm.com/da_dk/index.html">Home</a></li>
+                <li><a href="https://www2.hm.com/da_dk/index.html"> Beauty</a></li>
+                <li><a href="https://www2.hm.com/da_dk/dame.html">Women</a></li>
+                <li><a href="https://www2.hm.com/da_dk/born.html">Children</a></li>
+                <li><a href="https://www2.hm.com/da_dk/sale.html">Sale</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <h1>Sign up to yourcustumtailor.com</h1>
+        <h3>Step 2/4 - tell us who you are?</h3>
+        <div class="progress-container">
+            <p class="progress-label">Progress <progress value="35" max="100"></progress></p>
+        </div>
+    </section>
+ <!-- This is form part where user can interact with  -->
+<form action="/action_page.php" method="get">
+    <fieldset>
+        <legend>We will probably need to stay in touch somehow. Let is know how we can reach you?</legend>
+        <div class="email-phone">
+            <label for="email">Email:<span>*</span></label>
+            <input type="email" id="email" name="user-email" required/>
+            <label for="phone">Phone:<span>*</span></label>
+            <input type="tel" id="phone" name="user-phone" 
+            placeholder="12-34-56-78" minlength="8" maxlength="8"
+            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-0-9]{2}" required/>
+        </div>
+        <label for="password">Password:<span>*</span></label>
+        <input type="password"  id="password" required>
+        <br>
+        <label for="confirm_password">Re-enter Password:<span>*</span></label>
+        <input type="password" id="confirm_password"
+        minlength="8" required>
+        
+        <div class="newsletter-signup">
+            <p>I want to sign up for the newsletter</p>
+            <ul>
+                <li>
+                    <label for="html">Weekly news</label>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                </li>
+                <li>
+                    <label for="html">Monthly news</label>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                </li>
+                <li>
+                    <label for="html">Don't send me news</label>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                </li>
+            </ul>
+        </div>
+    </fieldset>
+</form>
+    
+    
+      <!-- In the footer there is a button for next step -->
+      <footer>
+        <div class="button">
+            <a href="index3.html">Next step</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-3 form-4 HomeWork</title>
+    <link rel="stylesheet" href="main4.css">
+</head>
+
+<body>
+    <!-- I have put two span element Logo and Navigation in header -->
+    <header>
+        <div>
+         <img class="image" src="H&M-Logo.svg" alt="logo" >
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="https://www2.hm.com/da_dk/index.html">Home</a></li>
+                <li><a href="https://www2.hm.com/da_dk/index.html"> Beauty</a></li>
+                <li><a href="https://www2.hm.com/da_dk/dame.html">Women</a></li>
+                <li><a href="https://www2.hm.com/da_dk/born.html">Children</a></li>
+                <li><a href="https://www2.hm.com/da_dk/sale.html">Sale</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <h1>Sign up to yourcustumtailor.com</h1>
+        <h3>Step 4/4 - tell us who you are?</h3>
+        <div class="progress-container">
+            <p class="progress-label">Progress <progress value="90" max="100"></progress></p>
+        </div>
+    </section>
+    <form action="/action_page.php" method="get">
+        <fieldset>
+            <legend>Please fill in your payment data</legend>
+
+            <label for="name">Name on card:</label>
+            <input type="text" id="name" name="user's-name">
+
+            <label for="card-type">Card type:</label>
+            <select id="card-type" name="user-card-type">
+                <option value="0">Select your card type</option>
+                <option value="1">Credit card</option>
+                <option value="2">Debit card</option>
+                <option value="3">Prepaid card</option>
+                <option value="4">Forex card</option>
+                <option value="5">Millenia card</option>
+            </select>
+
+            <label for="card-num">Card number:</label>
+            <input type="tel" id="card-num" pattern="[1-9]{4}, [1-9]{4}, [1-9]{4}, [1-9]{4}" name="user-number" 
+            placeholder="1234 1234 1234 1234"/>
+
+            <label for="ex-date">Expiry date:</label>
+            <input type="date" id="ex-date" name="user-date"/>
+
+            <label for="sec-code">Security code:</label>
+            <input type="password" id="sec-code" maxlength="3" minlength="3" name="user-code" placeholder="CVV"/>
+        </fieldset>
+    </form>
+    
+<!-- footer to finish the process and will take you back on front page -->
+    <footer>
+        <div class="button">
+            <a href="index.html">Finish</a>
+        </div>
+    </footer>
+    
+</body>
+</body>
