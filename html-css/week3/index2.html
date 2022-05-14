@@ -41,13 +41,20 @@
             <label for="phone">Phone:<span>*</span></label>
             <input type="tel" id="phone" name="user-phone" 
             placeholder="12-34-56-78" minlength="8" maxlength="8"
-            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-0-9]{2}" required/>
+            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-0-9]{2}"
+            title="Phone should only contain numbers. e.g. 1234"
+             required/>
         </div>
         <label for="password">Password:<span>*</span></label>
-        <input type="password"  id="password" required>
+        <input type="password"  id="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required>
         <br>
         <label for="confirm_password">Re-enter Password:<span>*</span></label>
         <input type="password" id="confirm_password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
         minlength="8" required>
         
         <div class="newsletter-signup">
