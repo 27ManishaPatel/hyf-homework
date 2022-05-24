@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* styling age calculator */
+.agecalculator {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 30%;
+    background-color: rgb(234, 215, 166);
+    font-family: sans-serif;
+}
+.agecalculator h2 {
+    margin-bottom: 1rem;
+}
+.agecalculator  fieldset {
+    padding: 1rem;
+}
+.agecalculator legend {
+    font-size: 18px;
+}
+ /* Uniform size & alignment of label*/
+ .agecalculator label {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    text-align: right;
+    font-size: 1.em;
+    font-weight: 600;
+}
+ /* Uniform size & alignment of input and select*/
+ .agecalculator input {
+    width: 80px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.agebutton{
+    display: flex;
+    justify-content: space-between;
+}
+.agebutton button {
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px; 
+    height: 50px;
+    margin-top: 10px;
+    background-color: beige;
+    box-sizing: border-box;
+}
+.agebutton textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
