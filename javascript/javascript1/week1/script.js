@@ -66,3 +66,17 @@ if (housePriceforJulia < actualJuliasRent){
    console.log("Julia is paying less")
 };
 
+
+ //Ez Namey (Startup name generator) Optional
+
+ const firstWords = ['Green', 'Future', 'Sunny','Unique', 'Reliable', 'Simple', 'Speedy', 'Trust', 'vision', 'Sky']
+ const secondWords = ['Apps', , 'Partners','Systems', 'Associates', 'Company', 'Technology', 
+'Consultant', 'Business', 'Digital', 'Corporates']
+
+//Generate random name from above list
+const randomFirstWords = firstWords[ Math.floor(Math.random() * 10)];
+const randomSecondWords = secondWords [Math.floor(Math.random() * 10)];
+
+let startupName = randomFirstWords + ' ' + randomSecondWords;
+
+console.log("The startup: " + startupName + " contains " + startupName.length + " characters");
