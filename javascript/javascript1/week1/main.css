@@ -41,7 +41,7 @@
 }
 .agebutton{
     display: flex;
-    justify-content: space-between;
+    
 }
 .agebutton button {
     width: 120px;
@@ -51,12 +51,15 @@
     margin-top: 10px;
     background-color: beige;
     box-sizing: border-box;
+    margin-left: 30px;
 }
 .agebutton textarea {
     margin-top: 10px;
     font-size: 16px;
     padding: 5px;
     font-family: sans-serif;
+    margin-left: 10px;
+    
 }
 /* for small screen */
 @media screen and (max-width: 600px) {
@@ -90,7 +93,7 @@
     padding: 1rem;
     margin: 1rem;
     width: 50%;
-    background-color: rgb(234, 215, 166);
+    background-color: rgb(204, 239, 247);
     font-family: sans-serif;
     float: right;
 }
@@ -131,7 +134,7 @@
     padding: 5px; 
     height: 50px;
     margin-top: 10px;
-    background-color: beige;
+    background-color: rgb(155, 200, 229); 
     box-sizing: border-box;
 }
 .dogagebutton textarea {
@@ -170,7 +173,68 @@
 }
 
 
+/* styling  Ez Namey (Startup name generator) Optional  */
 
+.namegenerator {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
+    background-color: rgb(242, 197, 243);
+    font-family: sans-serif;
+    float: left;
+}
+.namegenerator h2 {
+    margin-bottom: 1rem;
+}
+.namegenerator  fieldset {
+    padding: 1rem;
+}
+.namegenerator legend {
+    font-size: 18px;
+}
+
+.dogagebutton{
+    display: flex;
+    justify-content: space-between;
+}
+.namegenerator button {
+    display:block;
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px; 
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(240, 160, 238);
+    box-sizing: border-box;
+}
+.namegenerator textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+    width: 400px;
+    text-align: center;
+}
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .namegenerator {
+        width: 90%;
+        margin: 3px;
+    }
+    .namegenerator  fieldset {
+        padding: 5px;
+    }
+    .namegenerator h2 {
+        font-size: 20px;
+    }
+    .namegenerator legend {
+        font-size: 14px;
+    }
+    .namegenerator textarea {
+    width: 250px;
+    }
+}
 
 
 
