@@ -13,7 +13,7 @@
         <fieldset>
             <legend>You can count your future age year here</legend>
         <label for="birthyear">Year Of Birth:</label>
-        <input type="number" id="birthyear"   min="1950" max="2099" step="1" value="2016">
+        <input type="number" id="birthyear"   min="1950" max="2099" step="1" value="1989">
         <br>
         <label>Future Year:</label>
         <input type="number" id="futureyear"  min="2022" max="2099" step="1" value="2022">
@@ -24,6 +24,25 @@
         </div>
     </fieldset>
   </div>
+
+  <!-- Goodboy-Oldboy (A dog age calculator) -->
+  <div class="dogagecalculator">
+    <h2>Goodboy-Oldboy (A dog age calculator):</h2>
+    <fieldset>
+        <legend>You can count your dog's future age year here</legend>
+    <label for="dogbirthyear">Dog's Year Of Birth:</label>
+    <input type="number" id="dogbirthyear"   min="1950" max="2099" step="1" value="2017">
+    <br>
+    <label for="dogfutureyear"> Dog's Future Year:</label>
+    <input type="number" id="dogfutureyear"  min="2022" max="2099" step="1" value="2027">
+    <br>
+    <div class="dogagebutton">
+    <button onclick="dogFutureAge()">Future Age</button>
+    <textarea id="dogcalculatedage" cols="28" rows="2" ></textarea>
+    <textarea id="dogcalculatedhumanage" cols="28" rows="2" ></textarea>
+    </div>
+</fieldset>
+</div>
   
         
 
