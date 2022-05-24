@@ -57,4 +57,25 @@
     padding: 5px;
     font-family: sans-serif;
 }
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .agecalculator {
+        width: 90%;
+        margin: 3px;
+    }
+    .agecalculator  fieldset {
+        padding: 5px;
+    }
+    .agecalculator h2 {
+        font-size: 22px;
+    }
+    .agebutton{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .agebutton textarea {
+    width: 300px;
+    }
+}
 
