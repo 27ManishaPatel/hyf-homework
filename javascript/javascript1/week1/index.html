@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>JavaScript1 week-1</title>
 </head>
 <body>
+    <div class="agecalculator">
+        <h2>Age-ify (A future age calculator):</h2>
+        <fieldset>
+            <legend>You can count your future age year here</legend>
+        <label for="birthyear">Year Of Birth:</label>
+        <input type="number" id="birthyear"   min="1950" max="2099" step="1" value="2016">
+        <br>
+        <label>Future Year:</label>
+        <input type="number" id="futureyear"  min="2022" max="2099" step="1" value="2022">
+        <br>
+        <div class="agebutton">
+        <button onclick="futureAge()">Future Age</button>
+        <textarea id="calculatedage" cols="25" rows="2" ></textarea>
+        </div>
+    </fieldset>
+  </div>
   
-        <h1>Age-ify (A future age calculator)</h1>
+        
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
