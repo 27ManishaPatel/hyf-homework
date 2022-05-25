@@ -40,3 +40,29 @@ let startupName = randomFirstWords + ' ' + randomSecondWords;
     document.getElementById("uniquename").value = "The startup: " + startupName + " contains " + startupName.length + " characters";
 }
 
+ //Housey pricey (A house price estimator)
+
+//For Peter house
+
+function housePriceEstimator() {
+const gardenSizeInM22 = document.getElementById("garden").value;
+const phWidth2 = document.getElementById("width").value;
+const phHeight2 = document.getElementById("height").value;
+const phDepth2 = document.getElementById("depth").value;
+//lets calculate volumeInMeters
+let phvolumeInMeters2 = phWidth2 * phHeight2 * phDepth2;
+//What peter is paying now 
+const actualPetersRent2 = document.getElementById("currentrent").value;
+
+housePriceforpeter2 = phvolumeInMeters2 * 2.5 * 1000 + gardenSizeInM22 * 300;
+
+if (housePriceforpeter2 < actualPetersRent2){
+    document.getElementById("houseprice").value = "You are paying too much";
+
+} else if (housePriceforpeter2 == actualPetersRent2){
+    document.getElementById("houseprice").value = "You are paying expected amount";
+
+} else {
+    document.getElementById("houseprice").value = "You are paying less";
+};
+};
