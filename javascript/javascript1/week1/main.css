@@ -71,14 +71,20 @@
         padding: 5px;
     }
     .agecalculator h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .agecalculator legend {
         font-size: 14px;
     }
+    .agecalculator label {
+        width: 120px; 
+    }
     .agebutton{
     display: flex;
     flex-direction: column;
+    }
+    .agebutton button {
+        margin-left: 10px;
     }
 
     .agebutton textarea {
@@ -153,7 +159,7 @@
         padding: 5px;
     }
     .dogagecalculator h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .dogagecalculator legend {
         font-size: 14px;
@@ -226,7 +232,7 @@
         padding: 5px;
     }
     .namegenerator h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .namegenerator legend {
         font-size: 14px;
@@ -236,5 +242,96 @@
     }
 }
 
-
+/* styling a house price estimator */
+.housepricey {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 50%;
+    background-color: rgb(234, 215, 166);
+    font-family: sans-serif;
+    float: right;
+}
+.housepricey h2 {
+    margin-bottom: 1rem;
+}
+.housepricey  fieldset {
+    padding: 1rem;
+}
+.housepricey legend {
+    font-size: 18px;
+}
+ /* Uniform size & alignment of label*/
+ .housepricey label {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    text-align: right;
+    font-size: 1.em;
+    font-weight: 600;
+}
+ /* Uniform size & alignment of input and select*/
+ .housepricey input {
+    width: 100px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.housepricey-button {
+    display: flex;
+}
+.housepricey button {
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px; 
+    height: 50px;
+    margin-top: 10px;
+    background-color: beige;
+    box-sizing: border-box;
+    margin-left: 80px;
+}
+.housepricey textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+    margin-left: 6px;
+    
+}
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .housepricey {
+        width: 90%;
+        margin: 3px;
+    }
+    .housepricey  fieldset {
+        padding: 5px;
+    }
+    .housepricey h2 {
+        font-size: 18px;
+    }
+    .housepricey legend {
+        font-size: 14px;
+    }
+    .housepricey label {
+        display: inline-block;
+        position: relative;
+        width: 150px;
+        text-align: right;
+        font-size: 1.em;
+        font-weight: 600;
+    }
+    .housepricey-button {
+        display: flex;
+        flex-direction: column;
+        }
+    .housepricey button {
+            margin-left: 10px;
+        }
+    .housepricey textarea {
+    width: 250px;
+    }
+}
 
