@@ -20,7 +20,7 @@ function dogFutureAge() {
     document.getElementById("dogcalculatedage").value = "My dog will be " + dogsFutureAge + " dog years old in " + dogYearFuture;
 
     const dogsHumunFutureAge = dogsFutureAge * 7 ;
-    document.getElementById("dogcalculatedhumanage").value = "My dog will be " + dogsHumunFutureAge + " dog years old in " + dogYearFuture;
+    document.getElementById("dogcalculatedhumanage").value = "My dog will be " + dogsHumunFutureAge + " humun years old in " + dogYearFuture;
 }
 
 
