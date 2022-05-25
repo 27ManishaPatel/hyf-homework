@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* styling age calculator */
 .agecalculator {
     border: 1px solid black;
@@ -10,7 +14,6 @@
     width: 40%;
     background-color: rgb(234, 215, 166);
     font-family: sans-serif;
-    float: left;
 }
 .agecalculator h2 {
     margin-bottom: 1rem;
@@ -101,7 +104,6 @@
     width: 50%;
     background-color: rgb(204, 239, 247);
     font-family: sans-serif;
-    float: right;
 }
 .dogagecalculator h2 {
     margin-bottom: 1rem;
@@ -188,7 +190,6 @@
     width: 40%;
     background-color: rgb(242, 197, 243);
     font-family: sans-serif;
-    float: left;
 }
 .namegenerator h2 {
     margin-bottom: 1rem;
@@ -250,7 +251,6 @@
     width: 50%;
     background-color: rgb(234, 215, 166);
     font-family: sans-serif;
-    float: right;
 }
 .housepricey h2 {
     margin-bottom: 1rem;
