@@ -51,9 +51,35 @@
         <legend>You can generate Startup name here</legend>
         <button onclick="startUpNameGenerator()">Click Here</button>
         <textarea id="uniquename" cols="28" rows="2" ></textarea>
+</fieldset>
+</div>
+
+<!-- Housey pricey (A house price estimator) -->
+<div class="housepricey">
+    <h2>Housey pricey (A house price estimator):</h2>
+    <fieldset>
+        <legend>Estimate your house price here</legend>
+        <label for="width">House width(m):</label>
+        <input type="number" id="width" max="100" step="1" value="8"><br>
+        <label for="depth">House Depth(m):</label>
+        <input type="number" id="depth" max="100" step="1" value="10"><br>
+        <label for="height">House Height(m):</label>
+        <input type="number" id="height" max="100" step="1" value="10"><br>
+        <label for="garden">Garden Size(m2):</label>
+        <input type="number" id="garden" max="1000" step="1" value="100"><br>
+
+        <label for="currentrent">Your Current Rent:</label>
+        <input type="tel" id="currentrent" value="2500000"><br>
+        
+        <div class="housepricey-button">
+            <button onclick="housePriceEstimator()">House Price</button>
+            <textarea id="houseprice" cols="28" rows="2" ></textarea>
+        </div>
+
        
 </fieldset>
 </div>
+
   
    <script src="script.js"></script>
     <script src="script2.js"></script>
