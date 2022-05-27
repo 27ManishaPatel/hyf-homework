@@ -5,77 +5,67 @@ const yearOfBirth = 1989;
 const yearFuture = 2050;
 
 //with using - arithmatic operator we can calculate the age.
-let myAge  = yearFuture  - yearOfBirth;
+let myAge = yearFuture - yearOfBirth;
 
 console.log("I will be " + myAge + " years old in " + yearFuture);
 
 
 //Goodboy-Oldboy (A dog age calculator)
- const dogYearOfBirth = 2017;
- const dogYearFuture = 2027;
- const dogYear = dogYearFuture - dogYearOfBirth;
- const dogHumunsYear = 7 * dogYear ;
- let shouldShowResultInDogYears = "true";
+const dogYearOfBirth = 2017;
+const dogYearFuture = 2027;
+const dogYear = dogYearFuture - dogYearOfBirth;
+const dogHumunsYear = dogYear / 7;
+const shouldShowResultInDogYears = "true";
 
 
- if (shouldShowResultInDogYears == "true") {
-     console.log("My dog will be " + dogYear+ " dog years old in " + dogYearFuture )
- } else {
-     console.log("My dog will be " + dogHumunsYear+ " humuns years old in " + dogYearFuture )
- };
+if (shouldShowResultInDogYears) {
+    console.log("My dog will be " + dogYear + " dog years old in " + dogYearFuture)
+} else {
+    console.log("My dog will be " + dogHumunsYear + " humuns years old in " + dogYearFuture)
+};
 
- //Housey pricey (A house price estimator)
+//Housey pricey (A house price estimator)
 
-//For Peter house
-const gardenSizeInM2 = 100 ;
-const phWidth = 8;
-const phHeight = 10;
-const phDepth = 10;
+const gardenSizeInM2 = [100, 70];
+const phWidth = [8, 5];
+const phHeight = [10, 8];
+const phDepth = [10, 11];
 //lets calculate volumeInMeters
-let phvolumeInMeters = phWidth * phHeight * phDepth;
-//What peter is paying now 
-const actualPetersRent = 2500000;
+const volumeInMeters = [8 * 10 * 10, 5 * 11 * 8];
 
-housePriceforpeter = phvolumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+//What peter and Julia are paying now 
+const actualRent = [2500000, 1000000];
 
-if (housePriceforpeter < actualPetersRent){
+housePriceforpeter = volumeInMeters[0] * 2.5 * 1000 + gardenSizeInM2[0] * 300;
+console.log(housePriceforpeter);
+housePriceforJulia = volumeInMeters[1] * 2.5 * 1000 + gardenSizeInM2[1] * 300;
+console.log(housePriceforJulia);
+
+if (housePriceforpeter < actualRent[0]) {
     console.log("Peter is paying too much")
-} else if (housePriceforpeter == actualPetersRent){
-   console.log("Peter is paying expected amount")
+} else if (housePriceforpeter === actualRent[0]) {
+    console.log("Peter is paying expected amount")
 } else {
-   console.log("Peter is paying less")
+    console.log("Peter is paying less")
 };
 
-//For Julia house
-const jhgardenSizeInM2 = 70 ;
-const jhWidth = 5;
-const jhHeight = 8;
-const jhDepth = 11;
-//lets calculate volumeInMeters
-let jhvolumeInMeters = jhWidth * jhHeight * jhDepth;
-//What peter is paying now 
-const actualJuliasRent = 1000000;
-
-housePriceforJulia = jhvolumeInMeters  * 2.5 * 1000 + jhgardenSizeInM2 * 300;
-
-if (housePriceforJulia < actualJuliasRent){
+if (housePriceforJulia < actualRent[1]) {
     console.log("Julia is paying too much")
-} else if (housePriceforJulia == actualJuliasRent){
-   console.log("Julia is paying expected amount")
+} else if (housePriceforJulia === actualRent[1]) {
+    console.log("Julia is paying expected amount")
 } else {
-   console.log("Julia is paying less")
+    console.log("Julia is paying less")
 };
 
+//Ez Namey (Startup name generator) Optional
 
- //Ez Namey (Startup name generator) Optional
-
- const firstWords = ['Green', 'Future', 'Sunny','Unique', 'Reliable', 'Simple', 'Speedy', 'Trust', 'vision', 'Sky']
- const secondWords = ['Apps', , 'Partners','Systems', 'Associates', 'Company', 'Technology', 
-'Consultant', 'Business', 'Digital', 'Corporates']
+const firstWords = ['Green', 'Future', 'Sunny', 'Unique', 'Reliable', 'Simple', 'Speedy', 'Trust', 'vision', 'Sky']
+const secondWords = ['Apps', , 'Partners', 'Systems', 'Associates', 'Company', 'Technology',
+    'Consultant', 'Business', 'Digital', 'Corporates']
 
 //Generate random name from above list
-const randomFirstWords = firstWords[ Math.floor(Math.random() * 10)];
-const randomSecondWords = secondWords [Math.floor(Math.random() * 10)];
+const randomFirstWords = firstWords[Math.floor(Math.random() * 10)];
+const randomSecondWords = secondWords[Math.floor(Math.random() * 10)];
 
 let startupName = randomFirstWords + ' ' + randomSecondWords;
 
