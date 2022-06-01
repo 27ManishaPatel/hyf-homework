@@ -81,3 +81,38 @@ function youCreateThisFunctionName(t) {
 };
 const clothesToWear = youCreateThisFunctionName(18);
 console.log(clothesToWear); // Logs out: "cotton, jersey, denim. In short, light or mixed fabrics for a variable time."
+
+//4th exercise Student manager
+
+
+const class07Students = [];
+function addStudentToClass(studentName) {
+    if (class07Students.length >= 6) {
+        console.log("Cannot add more students to class 07");
+    } else if (class07Students.includes(studentName)) {
+        console.log("Student " + studentName + " is already in the class");
+    } else if (!studentName) {
+        console.log("Enter student\'s name Please!")
+    } else {
+        return class07Students.push(studentName);
+    }
+};
+
+addStudentToClass("");//return
+addStudentToClass("Manisha");//return
+addStudentToClass("Julia");//return
+addStudentToClass("Manisha");//return "Student Manisha is already in the class"
+addStudentToClass("Renu");//return
+addStudentToClass("Egle");//return
+addStudentToClass("Seona");//return
+addStudentToClass("Mahtab");//return 
+addStudentToClass("Vi"); //return "Cannot add more students to class 07"
+addStudentToClass("Queen"); // not working 
+
+console.log(class07Students);
+
+
+function getNumberOfStudents() {
+    console.log("The no of students in the class are " + class07Students.length);
+}
+getNumberOfStudents();
