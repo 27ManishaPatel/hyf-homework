@@ -62,6 +62,7 @@ function getEventWeekday(eventdayFromToday) {
 }
 console.log(getEventWeekday(7));
 
+
 //3rd exercise Weather wear
 function youCreateThisFunctionName(t) {
     if (t < 0) {
@@ -80,93 +81,3 @@ function youCreateThisFunctionName(t) {
 };
 const clothesToWear = youCreateThisFunctionName(18);
 console.log(clothesToWear); // Logs out: "cotton, jersey, denim. In short, light or mixed fabrics for a variable time."
-
-//4th exercise Student manager
-
-
-const class07Students = [];
-function addStudentToClass(studentName) {
-    if (class07Students.length >= 6) {
-        console.log("Cannot add more students to class 07");
-    } else if (class07Students.includes(studentName)) {
-        console.log("Student " + studentName + " is already in the class");
-    } else if (!studentName) {
-        console.log("Enter student\'s name Please!")
-    } else {
-        return class07Students.push(studentName);
-    }
-};
-
-addStudentToClass("");//return
-addStudentToClass("Manisha");//return
-addStudentToClass("Julia");//return
-addStudentToClass("Manisha");//return "Student Manisha is already in the class"
-addStudentToClass("Renu");//return
-addStudentToClass("Egle");//return
-addStudentToClass("Seona");//return
-addStudentToClass("Mahtab");//return 
-addStudentToClass("Vi"); //return "Cannot add more students to class 07"
-addStudentToClass("Queen"); // not working 
-
-console.log(class07Students);
-
-
-function getNumberOfStudents() {
-    console.log("The no of students in the class are " + class07Students.length);
-}
-getNumberOfStudents();
-
-
-//5th exercise Candy helper optional
-
-
-function addCandy(candyType, weight) {
-    return candyType + " " + weight;
-}
-const candyType = ["Sweet", "Chocolate", "Toffee", "Chewing-gum"];
-const weight = [20, 30, 20, 20];
-const price = [0.5, 0.7, 1.1, 0.03];
-for (let i = 0; i < candyType.length; i++)
-
-    console.log(addCandy(candyType[i], weight[i]));
-
-let candyPrice = [
-    (weight[0] * price[0]),
-    (weight[1] * price[1]),
-    (weight[2] * price[2]),
-    (weight[3] * price[3])
-];
-
-console.log(candyPrice);
-
-let boughtCandy0 = [candyType[0], weight[0]];
-boughtCandy0.push(candyPrice[0]);
-let boughtCandy1 = [candyType[1], weight[1]];
-boughtCandy1.push(candyPrice[1]);
-let boughtCandy2 = [candyType[2], weight[2]];
-boughtCandy2.push(candyPrice[2]);
-let boughtCandy3 = [candyType[3], weight[3]];
-boughtCandy3.push(candyPrice[3]);
-
-console.log(boughtCandy0);
-console.log(boughtCandy1);
-console.log(boughtCandy2);
-console.log(boughtCandy3);
-
-
-
-
-const amountToSpend = Math.random() * 100;
-let total = 60;
-function canBuyMoreCandy(total) {
-    for (let i = 0; i < candyPrice.length; i++) {
-        total += candyPrice[i];
-
-    }
-    if (total < amountToSpend) {
-        console.log("You can buy more, so please do!");
-    } else {
-        console.log("Enough candy for you!");
-    }
-}
-canBuyMoreCandy(4);
