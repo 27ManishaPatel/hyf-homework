@@ -116,3 +116,54 @@ function getNumberOfStudents() {
     console.log("The no of students in the class are " + class07Students.length);
 }
 getNumberOfStudents();
+
+//5th exercise Candy helper optional
+
+
+function addCandy(candyType, weight) {
+    return candyType + " " + weight;
+}
+const candyType = ["Sweet", "Chocolate", "Toffee", "Chewing-gum"];
+const weight = [20, 30, 20, 20];
+const price = [0.5, 0.7, 1.1, 0.03];
+for (let i = 0; i < candyType.length; i++)
+
+    console.log(addCandy(candyType[i], weight[i]));
+
+let candyPrice = [
+    (weight[0] * price[0]),
+    (weight[1] * price[1]),
+    (weight[2] * price[2]),
+    (weight[3] * price[3])
+];
+
+console.log(candyPrice);
+
+let boughtCandy0 = [candyType[0], weight[0]];
+boughtCandy0.push(candyPrice[0]);
+let boughtCandy1 = [candyType[1], weight[1]];
+boughtCandy1.push(candyPrice[1]);
+let boughtCandy2 = [candyType[2], weight[2]];
+boughtCandy2.push(candyPrice[2]);
+let boughtCandy3 = [candyType[3], weight[3]];
+boughtCandy3.push(candyPrice[3]);
+
+console.log(boughtCandy0);
+console.log(boughtCandy1);
+console.log(boughtCandy2);
+console.log(boughtCandy3);
+
+const amountToSpend = Math.random() * 100;
+let total = 60;
+function canBuyMoreCandy(total) {
+    for (let i = 0; i < candyPrice.length; i++) {
+        total += candyPrice[i];
+
+    }
+    if (total < amountToSpend) {
+        console.log("You can buy more, so please do!");
+    } else {
+        console.log("Enough candy for you!");
+    }
+}
+canBuyMoreCandy(4);
