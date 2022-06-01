@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* styling age calculator */
+.agecalculator {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
+    background-color: rgb(234, 215, 166);
+    font-family: sans-serif;
+}
+
+.agecalculator h2 {
+    margin-bottom: 1rem;
+}
+
+.agecalculator fieldset {
+    padding: 1rem;
+}
+
+.agecalculator legend {
+    font-size: 18px;
+}
+
+/* Uniform size & alignment of label*/
+.agecalculator label {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    text-align: right;
+    font-size: 1.em;
+    font-weight: 600;
+}
+
+/* Uniform size & alignment of input and select*/
+.agecalculator input {
+    width: 80px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.agebutton {
+    display: flex;
+
+}
+
+.agebutton button {
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: beige;
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+
+.agebutton textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+    margin-left: 10px;
+
+}
+
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .agecalculator {
+        width: 90%;
+        margin: 3px;
+    }
+
+    .agecalculator fieldset {
+        padding: 5px;
+    }
+
+    .agecalculator h2 {
+        font-size: 18px;
+    }
+
+    .agecalculator legend {
+        font-size: 14px;
+    }
+
+    .agecalculator label {
+        width: 120px;
+    }
+
+    .agebutton {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agebutton button {
+        margin-left: 10px;
+    }
+
+    .agebutton textarea {
+        width: 250px;
+    }
+}
+
+/* styling Goodboy-Oldboy (A dog age calculator) */
+
+.dogagecalculator {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 50%;
+    background-color: rgb(204, 239, 247);
+    font-family: sans-serif;
+}
+
+.dogagecalculator h2 {
+    margin-bottom: 1rem;
+}
+
+.dogagecalculator fieldset {
+    padding: 1rem;
+}
+
+.dogagecalculator legend {
+    font-size: 18px;
+}
+
+/* Uniform size & alignment of label*/
+.dogagecalculator label {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    text-align: right;
+    font-size: 1.em;
+    font-weight: 600;
+}
+
+/* Uniform size & alignment of input and select*/
+.dogagecalculator input {
+    width: 80px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.dogagebutton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dogagebutton button {
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(155, 200, 229);
+    box-sizing: border-box;
+}
+
+.dogagebutton textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .dogagecalculator {
+        width: 90%;
+        margin: 3px;
+    }
+
+    .dogagecalculator fieldset {
+        padding: 5px;
+    }
+
+    .dogagecalculator h2 {
+        font-size: 18px;
+    }
+
+    .dogagecalculator legend {
+        font-size: 14px;
+    }
+
+    .dogagecalculator label {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .dogagebutton {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dogagebutton textarea {
+        width: 250px;
+    }
+}
+
+
+/* styling  Ez Namey (Startup name generator) Optional  */
+
+.namegenerator {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
+    background-color: rgb(242, 197, 243);
+    font-family: sans-serif;
+}
+
+.namegenerator h2 {
+    margin-bottom: 1rem;
+}
+
+.namegenerator fieldset {
+    padding: 1rem;
+}
+
+.namegenerator legend {
+    font-size: 18px;
+}
+
+.dogagebutton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.namegenerator button {
+    display: block;
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(240, 160, 238);
+    box-sizing: border-box;
+}
+
+.namegenerator textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+    width: 400px;
+    text-align: center;
+}
+
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .namegenerator {
+        width: 90%;
+        margin: 3px;
+    }
+
+    .namegenerator fieldset {
+        padding: 5px;
+    }
+
+    .namegenerator h2 {
+        font-size: 18px;
+    }
+
+    .namegenerator legend {
+        font-size: 14px;
+    }
+
+    .namegenerator textarea {
+        width: 250px;
+    }
+}
+
+/* styling a house price estimator */
+.housepricey {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 50%;
+    background-color: rgb(234, 215, 166);
+    font-family: sans-serif;
+}
+
+.housepricey h2 {
+    margin-bottom: 1rem;
+}
+
+.housepricey fieldset {
+    padding: 1rem;
+}
+
+.housepricey legend {
+    font-size: 18px;
+}
+
+/* Uniform size & alignment of label*/
+.housepricey label {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    text-align: right;
+    font-size: 1.em;
+    font-weight: 600;
+}
+
+/* Uniform size & alignment of input and select*/
+.housepricey input {
+    width: 100px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.housepricey-button {
+    display: flex;
+}
+
+.housepricey button {
+    width: 120px;
+    font-size: 1.1em;
+    padding: 5px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: beige;
+    box-sizing: border-box;
+    margin-left: 80px;
+}
+
+.housepricey textarea {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: sans-serif;
+    margin-left: 6px;
+
+}
+
+/* for small screen */
+@media screen and (max-width: 600px) {
+    .housepricey {
+        width: 90%;
+        margin: 3px;
+    }
+
+    .housepricey fieldset {
+        padding: 5px;
+    }
+
+    .housepricey h2 {
+        font-size: 18px;
+    }
+
+    .housepricey legend {
+        font-size: 14px;
+    }
+
+    .housepricey label {
+        display: inline-block;
+        position: relative;
+        width: 150px;
+        text-align: right;
+        font-size: 1.em;
+        font-weight: 600;
+    }
+
+    .housepricey-button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .housepricey button {
+        margin-left: 10px;
+    }
+
+    .housepricey textarea {
+        width: 250px;
+    }
+}
