@@ -58,6 +58,7 @@ function getEventWeekday(eventdayFromToday) {
     const d = new Date();
     let today = d.getDay();
     let event = [(today + eventdayFromToday) % 7];
+    // also works without remainder "let event = eventdayFromToday - today;""
     return weekDays[event];
 }
 console.log(getEventWeekday(7));
