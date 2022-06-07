@@ -94,6 +94,8 @@ function addStudentToClass(studentName) {
         console.log("Student " + studentName + " is already in the class");
     } else if (!studentName) {
         console.log("Enter student\'s name Please!")
+    } else if (studentName === "Queen" || class07Students.length <= 6) {
+        return class07Students.push(studentName);
     } else {
         return class07Students.push(studentName);
     }
@@ -108,7 +110,10 @@ addStudentToClass("Egle");//return
 addStudentToClass("Seona");//return
 addStudentToClass("Mahtab");//return 
 addStudentToClass("Vi"); //return "Cannot add more students to class 07"
-addStudentToClass("Queen"); // not working 
+addStudentToClass("Queen");
+addStudentToClass("Queen");
+
+addStudentToClass("Queen");// not working 
 
 console.log(class07Students);
 
