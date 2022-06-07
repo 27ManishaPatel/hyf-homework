@@ -23,3 +23,22 @@ names.splice(indexOfName, 1);
 
 console.log(names); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
 
+//Exe-2 When will we be there??
+
+const travelInformation = {
+    speed: 50,
+    destinationDistance: 432,
+};
+function notThisFunctionName(travelInformation) {
+    const time = travelInformation.destinationDistance / travelInformation.speed;
+    console.log(time);
+    let hours = Math.floor(time);
+    console.log(hours);
+    let minutes = Math.floor((time - hours) * 60);
+    return hours + " Hours " + minutes + " Minutes";
+
+}
+
+const travelTime = notThisFunctionName(travelInformation);
+
+console.log(travelTime); // 8 hours and 38 minutes
