@@ -111,3 +111,4 @@ function toCalcTotalTime() {
 }
 console.log("In total that is " + toCalcTotalTime() + "% of my life");
 
+// Exe-4 Step 3: Smart-ease - Back to the basics!
