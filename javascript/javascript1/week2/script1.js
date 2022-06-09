@@ -88,19 +88,18 @@ console.log(clothesToWear); // Logs out: "cotton, jersey, denim. In short, light
 
 const class07Students = [];
 function addStudentToClass(studentName) {
-    if (class07Students.length >= 6) {
-        console.log("Cannot add more students to class 07");
+    if (!studentName) {
+        console.log("Enter student\'s name Please!")
     } else if (class07Students.includes(studentName)) {
         console.log("Student " + studentName + " is already in the class");
-    } else if (!studentName) {
-        console.log("Enter student\'s name Please!")
-    } else if (studentName === "Queen" || class07Students.length <= 6) {
-        return class07Students.push(studentName);
+    } else if (studentName === "Queen" || class07Students.length < 6) {
+        class07Students.push(studentName);
+    } else if (class07Students.length >= 6) {
+        console.log("Cannot add more students to class 07");
     } else {
-        return class07Students.push(studentName);
+        class07Students.push(studentName);
     }
 };
-
 addStudentToClass("");//return
 addStudentToClass("Manisha");//return
 addStudentToClass("Julia");//return
@@ -111,9 +110,7 @@ addStudentToClass("Seona");//return
 addStudentToClass("Mahtab");//return 
 addStudentToClass("Vi"); //return "Cannot add more students to class 07"
 addStudentToClass("Queen");
-addStudentToClass("Queen");
 
-addStudentToClass("Queen");// not working 
 
 console.log(class07Students);
 
