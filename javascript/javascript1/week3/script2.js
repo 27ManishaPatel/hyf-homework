@@ -101,3 +101,4 @@ function spentMostTime(activities) {
     return console.log("You have spent most of the time (around " + mostSpentTime + " min) 0n " + mostSpentActivity);
 }
 spentMostTime(activities); //"You have spent most of the time (around 50 min) 0n Facebook"
+
