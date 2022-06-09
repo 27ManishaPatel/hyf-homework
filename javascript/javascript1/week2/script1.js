@@ -109,7 +109,7 @@ addStudentToClass("Egle");//return
 addStudentToClass("Seona");//return
 addStudentToClass("Mahtab");//return 
 addStudentToClass("Vi"); //return "Cannot add more students to class 07"
-addStudentToClass("Queen");
+addStudentToClass("Queen");// return
 
 
 console.log(class07Students);
