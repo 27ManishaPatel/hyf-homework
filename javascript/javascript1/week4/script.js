@@ -8,6 +8,8 @@ let date = today.getDate();
 let options = { year: 'numeric', month: 'long' };
 const formatedDate = date + ". of " + today.toLocaleString('en-US', options);
 
+let operators = [];
+
 function getReply(command) {
     if (command == " " || typeof command !== "string") {
         alert("Give some command Please!");
@@ -32,6 +34,19 @@ function getReply(command) {
         return "Removed " + indexOfFishing + " from your todoList."
     } else if (command === "What day is it today?") {
         return formatedDate;
+    } else if (command.includes("What is")) {
+        const stringOperations = command.replace("What is ", "");
+        const array = stringOperations.split("");
+        if (array[1] === "+") {
+            return parseInt(array[0]) + parseInt(array[2])
+        } else if (array[1] === "-") {
+            return array[0] - array[2];
+        } else if (array[1] === "*") {
+            return array[0] * array[2];
+        } else if (array[1] === "/") {
+            return array[0] / array[2];
+        }
+        //return eval(stringOperations);
     }
 }
 
@@ -44,3 +59,4 @@ console.log(getReply("Add singing in the shower to my todo"));
 console.log(getReply("What is on my todo?"));
 console.log(getReply("Remove fishing from my todo"));
 console.log(getReply("What day is it today?"));
+console.log(getReply("What is 6+9"))
