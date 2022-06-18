@@ -5,6 +5,8 @@ let personName = [];
 const todoList = [];
 let today = new Date();
 let date = today.getDate();
+
+
 let options = { year: 'numeric', month: 'long' };
 const formatedDate = date + ". of " + today.toLocaleString('en-US', options);
 
@@ -46,7 +48,21 @@ function getReply(command) {
         } else if (array[1] === "/") {
             return array[0] / array[2];
         }
-        //return eval(stringOperations);
+    } else if (command === "Set a timer for 1 minutes") {
+
+        const startingMinutes = command.replace(/\D/g, "");
+        let time = startingMinutes * 60;
+
+        setInterval(updateCountDown, 1000);
+        function updateCountDown() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            time--;
+            console.log(`Timer is set ${minutes}: ${seconds}`);
+            if (minutes == 0 && seconds == 0) {
+                return alert("Timer Done");
+            }
+        }
     }
 }
 
@@ -59,4 +75,5 @@ console.log(getReply("Add singing in the shower to my todo"));
 console.log(getReply("What is on my todo?"));
 console.log(getReply("Remove fishing from my todo"));
 console.log(getReply("What day is it today?"));
-console.log(getReply("What is 6+9"))
+console.log(getReply("What is 6+9"));
+console.log(getReply("Set a timer for 1 minutes"));
