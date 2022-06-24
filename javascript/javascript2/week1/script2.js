@@ -5,24 +5,19 @@ const typingBtn = document.getElementById("whenTyping");
 const clickBtn = document.getElementById("btnclick");
 
 hoverBtn.addEventListener("change", function () {
-    if (hoverBtn.checked) {
-        const hoverOver = document.getElementById("inputName");
-        hoverOver.addEventListener("mouseover", generateNameAnimal);
-    }
+    const hoverOver = document.getElementById("inputName");
+    hoverOver.addEventListener("mouseover", generateNameAnimal);
 });
-
 
 hoverBtn.addEventListener("change", function () {
     const hoverOver = document.getElementById("inputName");
     hoverOver.addEventListener("keypress", generateNameAnimal);
 });
 
-
 clickBtn.addEventListener("change", function () {
     const generateBtn = document.getElementById("generateNameBtn");
     generateBtn.addEventListener("click", generateNameAnimal);
 });
-
 
 function generateNameAnimal() {
     const personName = document.getElementById("inputName").value;
@@ -45,7 +40,7 @@ function generateNameAnimal() {
     } else {
         return spiritAnimalNamme.innerText = `${personName}: ${displayAnimal}`
     }
-}
+};
 
 
 

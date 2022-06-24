@@ -19,7 +19,6 @@ function renderProducts(products) {
 
         const rate = document.createElement("li");
 
-
         title.innerText = `Title: ${products[i].name}`;
         price.innerText = `Price: ${products[i].price}`;
         rate.innerText = `Rating: ${products[i].rating}`;
