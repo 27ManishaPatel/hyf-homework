@@ -1,21 +1,31 @@
 
 //1st Exe: Find the shortest word
 let myDiv = document.getElementById("findShortWord");
+myDiv.style.border = "2px solid black";
+myDiv.style.padding = "20px";
+myDiv.style.width = "50%";
+myDiv.style.textAlign = "center";
+myDiv.backgroundColor = "bisque";
+
 let heading = document.createElement("h1");
+heading.style.fontSize = "24px"
 heading.innerText = "Find the shortest word";
 myDiv.appendChild(heading);
 
-let words = document.createElement("ul");
+let words = document.createElement("h3");
 words.innerText = "Words";
 myDiv.appendChild(words);
 
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
 for (let i = 0; i < danishWords.length; i++) {
-    let wordsList = document.createElement("li");
+    let wordsList = document.createElement("p");
     wordsList.innerText = danishWords[i];
-    words.appendChild(wordsList);
+    myDiv.appendChild(wordsList);
 }
 const myButton = document.createElement('button');
+myButton.style.height = "40px";
+myButton.style.backgroundColor = "rgb(244, 178, 97";
+myButton.style.fontSize = "20px";
 myButton.innerText = 'Shortest Word';
 myDiv.appendChild(myButton);
 
@@ -31,56 +41,45 @@ function findShortWord() {
 };
 
 //Find and count the Danish letters
-let myDiv2 = document.getElementById("findDanLetter");
-let input = document.createElement("p");
-myDiv2.appendChild(input);
-input.innerText = "Jeg har en blå bil å æ";
+const myDivExe2 = document.getElementById("findDanLetter");
+myDivExe2.style.border = "2px solid black";
+myDivExe2.style.padding = "20px";
+myDivExe2.style.textAlign = "lrft";
+myDivExe2.style.width = "50%";
 
-let danishString = input.innerText;
-let danishStringInArray = danishString.split("");
-console.log(danishStringInArray);
 
-const myButton2 = document.createElement('button');
-myButton2.innerText = 'Danish Word';
-myDiv2.appendChild(myButton2);
+const danishString1 = "Jeg har en blå bil";
 
-myButton2.addEventListener("click", findDanLetetr);
+const danishString2 = "Blå grød med røde bær"
 
-function findDanLetetr() {
-    let danishStringInArray = danishString.split("");
-    let display2 = document.createElement("p");
-    myDiv2.appendChild(display2);
+function findDanLetter(x) {
+    const para = document.createElement("p");
+    para.innerText = x
+    myDivExe2.appendChild(para);
 
-    const danishLetterÅ = /å/i;
-    const danishLetterÆ = /æ/i;
-    const danishLetterØ = /ø/i;
-
-    const foundÅ = (danishStringInArray.match(danishLetterÅ) || []).length;
-    const foundÆ = (danishStringInArray.match(danishLetterÆ) || []).length;
-    const foundØ = (danishStringInArray.match(danishLetterØ) || []).length;
-    let Total = foundÅ + foundÆ + foundØ
-
+    const letterÅ = /å/i;
+    const letterÆ = /æ/i;
+    const letterØ = /ø/i;
+    const foundÅ = (x.match(letterÅ) || []).length;
+    const foundÆ = (x.match(letterÆ) || []).length;
+    const foundØ = (x.match(letterØ) || []).length;
+    let total = foundÅ + foundÆ + foundØ;
     let result = {
-        total: Total,
-        æ: foundÅ,
-        ø: foundÆ,
-        å: foundØ
+        Total: total,
+        Å: foundÅ,
+        Æ: foundÆ,
+        Ø: foundØ,
     }
-    return display2.innerText = result;
-
-    // return display2.innerText = displyChar;
+    let result1 = JSON.stringify(result);
+    const displayOutput = document.createElement('p')
+    displayOutput.innerHTML = `Danish Letters : ${result1}`
+    para.appendChild(displayOutput);
+    return result
 }
-    // let danStrinInArray = danishString.split("");
-    // let pattern = /(å|æ)/g;
-    // let result = danStrinInArray.match(pattern);
-    // display2.innerText = result;
 
-    // for (let i = 0; i < danStrinInArray.length; i++) {
-    //     if (danStrinInArray == "å"){
-    //         display2.innerText = `Total: ${danLetterInInput} , å: ${danLetterInInput}`
-    //     }
+console.log(findDanLetter(danishString1));// returns {total: 1, å: 1}
+console.log(findDanLetter(danishString2));  // returns {total: 4, æ: 1, ø: 2, å: 1}
 
-    // let danLetterInInput = danishString.match(danLetter[i]);
-    // display2.innerText = `Total: ${danLetterInInput} , å: ${danLetterInInput}`;
+
 
 
