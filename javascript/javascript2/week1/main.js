@@ -28,9 +28,7 @@ function renderProducts(products) {
         myProductList.appendChild(rate);
 
         myProducts.appendChild(myProductList);
-
-
-    }// your code here
+    }
 }
 
 console.log(renderProducts(products));
