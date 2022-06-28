@@ -7,7 +7,7 @@ let newNumbers = numbers
     .map(num => num * 2);
 
 console.log("The doubled numbers are", newNumbers); // [2, 6]
-console.log(movies);
+
 //Ex-2 Working with movies
 //1. Create an array of movies containing the movies with a short title (you define what short means)
 const shortTitleMovies = movies.filter(shortMovie => shortMovie.title.length < 5);
@@ -46,13 +46,40 @@ console.log(higherRatedMovie);
 //6. Count the total number of movies containing any of following keywords: Surfer, Alien or Benjamin. 
 //So if there were 3 movies that contained Surfer, 1 with Alien and 2 with Benjamin, you would return 6. Can you make sure the search is case insensitive?
 
-const noOfMovies = movies.filter(movie => movie.title.match(/SURFER/i)).length +
-    movies.filter(movie => movie.title.match(/BenjAMin/i)).length +
-    movies.filter(movie => movie.title.match(/alien/i)).length;
-
+const noOfMovies = movies.filter(movie => movie.title.match(/SURFER|Benjamin|Alien/i)).length
 console.log(`${noOfMovies}  movies contains following keywords: Surfer, Alien or Benjamin.`);
 
 //7.Create an array of movies where a word in the title is duplicated. Fx "Star Wars: The Clone Wars" the word Wars is duplicated. Here are some madeup examples of movies with duplicated words in the title: "The three men and the pistol", "Chase three - The final chase"
 
-//const moviesTitlleInArray = movies.map(movie => movie.title.split(" "));
+const duplicateMovie = movies.filter((movie) => {
+    const moviesTitlleInArray = movie.title.toLowerCase().split(" ").sort();
+    for (let i = 0; i < moviesTitlleInArray.length; i++) {
+        if (moviesTitlleInArray[i] === moviesTitlleInArray[i + 1]) {
+            return movie;
+        }
+    }
+});
+console.log(`Movies with duplicate words are ${duplicateMovie.length}`)
 
+//8.Calculate the average rating of all the movies using reduce. Optional
+
+const avarageRating = (movies.reduce((el, value) => el + value.rating, 0) / movies.length).toFixed(2);
+console.log(`The average rating of all the movies is ${avarageRating}`);
+
+//9.Count the total number of Good, Average and Bad movies using reduce. A return could fx be {goodMovies: 33, averageMovies: 45, goodMovies: 123} Optional
+// const tagRatingMovies = movies.reduce((mv, value) => {
+//     let good = mv + (value.tag == "Good")
+//     return good
+// }, 0)
+const tagRatingMovies = movies.reduce((mv, movie) => {
+    if (movie.tag == "Good") {
+        mv.goodMovies++;
+    } else if (movie.tag == "Average") {
+        mv.averageMovies++;
+    } else if (movie.tag == "Bad") {
+        mv.badMovies++;
+    }
+    return mv;
+}, { goodMovies: 0, averageMovies: 0, badMovies: 0 }
+);
+console.log(tagRatingMovies)
