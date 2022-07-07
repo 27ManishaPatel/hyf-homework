@@ -8,9 +8,6 @@ const scoreL = document.getElementById("scoreL");
 const divForS = document.getElementById("right");
 const divForL = document.getElementById("left");
 
-
-
-
 const wonSkey = document.getElementById("wonSkey");
 const wonLkey = document.getElementById("wonLkey");
 
@@ -29,6 +26,7 @@ btn.addEventListener("click", () => {
             ended = true;
             clearInterval(countdown);
             endGame();
+
         }
     }, 1000);
 })
@@ -42,12 +40,8 @@ function startGame() {
         } else if (event.code === "KeyL") {
             scoreL.innerHTML = startNUmL++;
         }
-
     });
 };
-
-
-
 function endGame() {
     if (startNUmS === startNUmL) {
         wonSkey.innerHTML = "It's a DRAW!!";
@@ -72,7 +66,7 @@ function endGame() {
         // var confettiL = new ConfettiGenerator(confettiSettingsL);
         // confettiL.render();
     }
-
+    inputTime.value = "";
     startNUmS = "";
     startNUmL = "";
 }
