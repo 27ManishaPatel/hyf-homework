@@ -19,7 +19,7 @@
     <button id="Location">Log location</button>
     <p>Geolocation: <span id="displayLocation"></span> </p>
 
-    <div id="map-location"></div>
+    <div id="map"></div>
 
     <p>earthLogger: <span id="earth"></span></p>
     <p>saturnLogger: <span id="saturn"></span></p>
@@ -31,8 +31,12 @@
 
     <p><b>Joke of the day:</b> <span id="joke"></span></p>
 
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0NryQ3LR-ocpR_0LPwIDbBNrFscWG24Y&callback=initMap">
+        </script>
+
     <!-- <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6xOwqRYJWD6FHlpfTTDU9Fzu-JKvJSk&callback=myMap"></script> -->
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6xOwqRYJWD6FHlpfTTDU9Fzu-JKvJSk&callback=myMap()&v=weekly"></script> -->
     <script src="script.js"></script>
     <script src="funAsVar.js"></script>
 </body>

@@ -56,15 +56,14 @@ function showPosition(position) {
         "<br>Longitude: " + position.coords.longitude;
 };
 //exe-6 Optional Now show that location on a map
-//googleMap = document.getElementById("map-location");
-// function myMap() {
-//     var mapProp = {
-//         center: new google.maps.LatLng(51.508742, -0.120850),
-//         zoom: 5,
-//     };
-//     var map = new google.maps.Map(document.getElementById("map-location"), mapProp);
-// }
-
+function initMap() {
+    var dumbo = { lat: 40.700802, lng: 73.987602 };
+    var mapOptions = {
+        center: dumbo,
+        zoom: 10
+    };
+    var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
 //exe-7 
 function runAfterDelay(delay, callback) {
     setTimeout(() => {
