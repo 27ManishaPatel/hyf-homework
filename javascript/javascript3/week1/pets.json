@@ -1,0 +1,44 @@
+{
+    "pets": [
+        {
+            "name": "Cat",
+            "favFood": [
+                "milk",
+                "Cooked beef",
+                "chicken",
+                "turkey",
+                "meats"
+            ],
+            "picture": "https://www.pexels.com/search/cat/"
+        },
+        {
+            "name": "Dog",
+            "favFood": [
+                "beef",
+                "meat",
+                "bone"
+            ],
+            "picture": "https://www.bbc.com/news/newsbeat-61494094"
+        },
+        {
+            "name": "Fish",
+            "favFood": [
+                "earthworms",
+                "sludge worms",
+                "water fleas",
+                "bloodworms",
+                "feeder fish"
+            ],
+            "picture": "https://www.businessinsider.com/fish-do-not-exist-2016-8"
+        },
+        {
+            "name": "Rabbit",
+            "favFood": [
+                "carrot",
+                "escarole",
+                "lettuce"
+            ],
+            "picture": "https://www.pexels.com/search/rabbit/"
+        }
+    ]
+}
