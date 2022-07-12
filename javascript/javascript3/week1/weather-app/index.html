@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Weather Application</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Weather in</h1>
+            <div>
+                <input type="text" id="search-location" placeholder="Search">
+                <button id="btn" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+        <section>
+            <h6 id="search-city"> </h6>
+            <div>
+                <div class="date-box">
+                    <p><span id="current-date"></span> <span id="time"></span></p>
+                </div>
+                <div class="weather-info">
+                    <div class="temp-icon">
+                        <p id="temperature">Temp</p>
+                        <div class="cloud-icon-text">
+                            <img src="" id="icon" alt="Weathericon">
+                            <p id="description"></p>
+                        </div>
+                    </div>
+                    <p id="feels"></p>
+                    <p>Humadity: <span id="humadity"></span></p>
+                    <p>Wind :<span id="wind"></span> Km/h</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>

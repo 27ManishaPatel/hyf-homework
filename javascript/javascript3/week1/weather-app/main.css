@@ -1,0 +1,105 @@
+body {
+    background-image: url(https://source.unsplash.com/1600x900/?landscape);
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 25px;
+    /* background-color: rgb(65, 124, 153); */
+    background: #000000d0;
+    color: white;
+}
+
+@media only screen and (max-width: 699px) {
+    .wrapper {
+        margin: auto;
+        width: 95%;
+    }
+}
+
+header h1 {
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header input {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    padding: 0px 20px;
+    font-size: 22px;
+}
+
+header button {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 50px;
+    height: 40px;
+    padding: 0px 5px;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 690px) {
+    header input {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    header input {
+        width: 150px;
+    }
+}
+
+section h6 {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+section h6 span {
+    color: rgb(121, 180, 231);
+    font-size: 28px;
+    margin-left: 0px;
+}
+
+.date-box {
+    font-size: 22px;
+    text-align: left;
+}
+
+.temp-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.cloud-icon-text img {
+    width: 150px;
+}
+
+#description {
+    font-size: 30px;
+}
+
+.weather-info p,
+span {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+
+#temperature {
+    font-size: 30px;
+}
