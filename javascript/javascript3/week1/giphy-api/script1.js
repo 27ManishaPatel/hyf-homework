@@ -20,7 +20,7 @@ gifyBtn.addEventListener("click", function() {
                 displayGif(data);
             });
     }
-})
+});
 
 // default gif 
 gifySearch = "find here";
@@ -39,5 +39,5 @@ function displayGif(data) {
         newImage.setAttribute("src", gifyUrl)
         gifyContainer.appendChild(newImage);
         console.log(gifyUrl)
-    })
-}
+    });
+};
