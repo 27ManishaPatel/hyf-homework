@@ -6,12 +6,10 @@ const gifyContainer = document.getElementById("container");
 const apiKey = "V8V02wFyIrDZPBpfeY18HaDyPAKXikHL";
 //add event 
 gifyBtn.addEventListener("click", function() {
-    const gifySearch = searchGify.value;
+    const gifySearch = searchGify.value.toUpperCase();
     const gifyTotal = numOfGify.value;
     if (!gifySearch) {
         alert("Write something for GIF")
-    } else if (!gifyTotal) {
-        alert("How many GIF you want?")
     } else {
         gifyContainer.innerHTML = ""
         fetch(`https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
@@ -24,7 +22,7 @@ gifyBtn.addEventListener("click", function() {
 
 // default gif 
 gifySearch = "find here";
-gifyTotal = 4;
+gifyTotal = 2;
 fetch(`https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
     .then(response => response.json())
     .then(data => {
