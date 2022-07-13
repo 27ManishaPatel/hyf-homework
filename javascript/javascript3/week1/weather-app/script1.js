@@ -9,6 +9,9 @@ let todayDate = document.getElementById("current-date"); // current date
 const icon = document.getElementById("icon"); // icon
 const description = document.getElementById("description"); // description of weather
 
+const sunrise = document.getElementById("sunrise");
+const sunset = document.getElementById("sunset");
+
 // current date with toLocaleDateString method
 var options = {
     weekday: 'long',
@@ -29,6 +32,7 @@ btn.addEventListener("click", function() {
                 .then(response => response.json())
                 .then(data => {
                     display(searcheName, data)
+                    console.log(data)
                 });
         }
     })
@@ -38,10 +42,12 @@ const display = (searcheName, data) => {
         temperature.innerHTML = `${data.main.temp} ° C`;
         humadity.innerHTML = `${data.main.humidity}`;
         feels.innerHTML = `Feels like: ${data.main.feels_like}`;
-        icon.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+        icon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
         description.innerHTML = data.weather[0].description;
-        wind.innerHTML = data.wind.speed
-        console.log(data);
+        wind.innerHTML = data.wind.speed;
+        sunrise.innerHTML = `Sunrise at ${new Date(data.sys.sunrise*1000).getHours()} : ${new Date(data.sys.sunrise*1000).getMinutes()}`
+        sunset.innerHTML = `Sunset at ${new Date(data.sys.sunset*1000).getHours()} : ${new Date(data.sys.sunset*1000).getMinutes()}`
+        console.log(data)
     }
     //its shows copenhagen city as an default and I will update this with current place later(thats an idea)
 searcheName = "copenhagen"
@@ -50,4 +56,24 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q= ${searcheName} &units=
     .then(data => {
         display(searcheName, data)
     });
-display(copenhagen, data);
+
+let map;
+
+function initMap() {
+    function getLocation() {
+        navigator.geolocation.getCurrentPosition((position) => {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            googlemap = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: latitude, lng: longitude },
+                zoom: 8,
+            });
+            let marker = new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map: map,
+            });
+        })
+    };
+    getLocation()
+}
+window.initMap = initMap;
