@@ -15,6 +15,13 @@ body {
     color: white;
 }
 
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        margin: auto;
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 699px) {
     .wrapper {
         margin: auto;
@@ -128,13 +135,13 @@ span {
 
 #map {
     border: 1px solid white;
-    width: 200px;
+    width: 160px;
     height: 200px;
     margin: 10px;
 }
 
-@media only screen and (max-width: 1260px) {
-    .map {
-        width: 170px;
+@media only screen and (max-width: 1200px) {
+    #map {
+        width: 160px;
     }
 }
