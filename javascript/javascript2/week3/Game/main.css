@@ -49,7 +49,6 @@ body {
     height: 50px;
     margin: auto;
     padding-top: 15px;
-
 }
 
 .game-wrapper button {
@@ -98,6 +97,8 @@ body {
 
 .container-right,
 .container-left {
+    display: flex;
+    flex-direction: column;
     font-size: 25px;
     margin-top: 20px;
 }
@@ -106,8 +107,13 @@ body {
     #right {
         font-size: 30px;
     }
-
     #left {
         font-size: 30px;
     }
+}
+
+canvas {
+    z-index: 1;
+    position: absolute;
+    margin-top: 0;
 }

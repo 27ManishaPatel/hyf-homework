@@ -13,10 +13,13 @@ const wonLkey = document.getElementById("wonLkey");
 
 let startNUmS = 0;
 let startNUmL = 0;
+let ended = false; // added
 
 btn.addEventListener("click", () => {
+    startNUmS = "";
+    startNUmL = "";
     let StartingSec = inputTime.value;
-    ended = false;
+    ended = true;
     startGame()
     timer.innerHTML = `${StartingSec} : 00`;
     const countdown = setInterval(() => {
@@ -26,10 +29,10 @@ btn.addEventListener("click", () => {
             ended = true;
             clearInterval(countdown);
             endGame();
-
         }
     }, 1000);
 })
+
 function startGame() {
     document.addEventListener("keypress", (event) => {
         if (event.code !== "KeyS" && event.code !== "KeyL") {
@@ -42,6 +45,7 @@ function startGame() {
         }
     });
 };
+
 function endGame() {
     if (startNUmS === startNUmL) {
         wonSkey.innerHTML = "It's a DRAW!!";
@@ -52,19 +56,20 @@ function endGame() {
         wonSkey.style.color = "white";
         divForS.style.backgroundColor = "rgb(59, 179, 0)";
 
-        // var confettiSettingsS = { target: "my-canvas-s" };
-        // confettiSettingsS.width = 100
-        // var confettiS = new ConfettiGenerator(confettiSettingsS);
-        // confettiS.render();
+        var confettiSettingsS = { target: "my-canvas-s" };
+        confettiSettingsS.width = 300
+        var confettiS = new ConfettiGenerator(confettiSettingsS);
+        confettiS.render();
     } else {
         wonLkey.innerHTML = "WON";
         wonLkey.style.fontSize = "40px";
         wonLkey.style.color = "white";
         divForL.style.backgroundColor = "rgb(59, 179, 0)";
 
-        // var confettiSettingsL = { target: "my-canvas-l" };
-        // var confettiL = new ConfettiGenerator(confettiSettingsL);
-        // confettiL.render();
+        var confettiSettingsL = { target: "my-canvas-l" };
+        confettiSettingsL.width = 300
+        var confettiL = new ConfettiGenerator(confettiSettingsL);
+        confettiL.render();
     }
     inputTime.value = "";
     startNUmS = "";
