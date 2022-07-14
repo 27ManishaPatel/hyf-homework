@@ -28,7 +28,7 @@ btn.addEventListener("click", function() {
         if (!searcheName) {
             alert("Write name of city")
         } else {
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q= ${searcheName} &units=metric&appid=66fa0f600aeb3e00b5df455da61d2af3`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searcheName}&units=metric&appid=66fa0f600aeb3e00b5df455da61d2af3`)
                 .then(response => response.json())
                 .then(data => {
                     display(searcheName, data)
