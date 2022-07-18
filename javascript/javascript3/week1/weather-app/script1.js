@@ -13,7 +13,7 @@ const sunrise = document.getElementById("sunrise");
 const sunset = document.getElementById("sunset");
 
 // current date with toLocaleDateString method
-var options = {
+let options = {
     weekday: 'long',
     year: "numeric",
     month: "numeric"
@@ -50,8 +50,6 @@ const display = (searcheName, data) => {
     console.log(data)
 }
 
-let map;
-
 function initMap() {
     function getLocation() {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -84,3 +82,5 @@ function initMap() {
     getLocation()
 }
 window.initMap = initMap;
+
+console.log(screen.width);

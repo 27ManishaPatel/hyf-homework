@@ -12,7 +12,7 @@ gifyBtn.addEventListener("click", function() {
         alert("Write something for GIF")
     } else {
         gifyContainer.innerHTML = ""
-        fetch(`https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
             .then(response => response.json())
             .then(data => {
                 displayGif(data);
@@ -23,7 +23,7 @@ gifyBtn.addEventListener("click", function() {
 // default gif 
 gifySearch = "find here";
 gifyTotal = 2;
-fetch(`https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
+fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
     .then(response => response.json())
     .then(data => {
         displayGif(data);
