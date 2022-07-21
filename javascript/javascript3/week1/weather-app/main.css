@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://source.unsplash.com/1600x900/?landscape);
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 25px;
+    /* background-color: rgb(65, 124, 153); */
+    background: #000000d0;
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    .wrapper {
+        margin: auto;
+        width: 95%;
+    }
+}
+
+header h1 {
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header input {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    padding: 0px 20px;
+    font-size: 22px;
+}
+
+header button {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 50px;
+    height: 40px;
+    padding: 0px 5px;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 690px) {
+    header input {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    header input {
+        width: 150px;
+    }
+}
+
+section h6 {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+#sunrise {
+    font-size: 18px;
+    margin-left: 30px;
+    color: rgb(217, 150, 16);
+}
+
+section h6 {
+    color: rgb(121, 180, 231);
+    font-size: 22px;
+}
+
+.date-box {
+    font-size: 20px;
+    text-align: left;
+}
+
+.temp-icon {
+    display: flex;
+}
+
+.cloud-icon-text img {
+    width: 150px;
+}
+
+#description {
+    font-size: 30px;
+}
+
+#sunset {
+    color: rgb(217, 150, 16);
+}
+
+.weather-info p,
+span {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.cloud-icon-text {
+    margin-left: 30px;
+}
+
+#temperature {
+    font-size: 30px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.parameter {
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#map {
+    border: 1px solid white;
+    width: 160px;
+    height: 200px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #map {
+        width: 160px;
+    }
+}

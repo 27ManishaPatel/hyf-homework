@@ -1,0 +1,79 @@
+.wrapper {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #1782a9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #624d4d;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+.wrapper h1 {
+    font-family: "sofia", sans-serif;
+    font-size: 4em;
+    font-weight: 600;
+    padding: 0.8em;
+    text-shadow: 4px 4px 4px #624d4d;
+    color: aliceblue;
+    border-radius: 50%;
+    /* background-image: url(https://imgur.com/lV6xYra][img]http://i.imgur.com/lV6xYra.gif); */
+    background-image: url(https://i.pinimg.com/originals/62/39/4d/62394d753859943e6a1a36443ef78795.gif);
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper h1 {
+        font-size: 2.6em;
+        font-weight: 600;
+    }
+}
+
+.wrapper input {
+    align-items: center;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 30px;
+    padding: 10px;
+    font-size: 2.2em;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.wrapper button {
+    width: 30%;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    border-radius: 6px;
+    background-color: rgb(21, 195, 137);
+    border: none;
+    box-shadow: 2px 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper button {
+        width: 40%;
+        font-size: 1.2em;
+    }
+    .wrapper input {
+        width: 80%;
+        font-size: 1.8em;
+    }
+}
+
+.my-gify-style {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    align-items: center;
+    border: 1px solid black;
+}
