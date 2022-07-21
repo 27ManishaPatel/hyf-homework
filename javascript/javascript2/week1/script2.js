@@ -4,18 +4,19 @@ const hoverBtn = document.getElementById("hoverInput");
 const typingBtn = document.getElementById("whenTyping");
 const clickBtn = document.getElementById("btnclick");
 
-hoverBtn.addEventListener("change", function () {
-    const hoverOver = document.getElementById("inputName");
+const hoverOver = document.getElementById("inputName");
+
+const generateBtn = document.getElementById("generateNameBtn");
+
+hoverBtn.addEventListener("change", function() {
     hoverOver.addEventListener("mouseover", generateNameAnimal);
 });
 
-hoverBtn.addEventListener("change", function () {
-    const hoverOver = document.getElementById("inputName");
+typingBtn.addEventListener("change", function() {
     hoverOver.addEventListener("keypress", generateNameAnimal);
 });
 
-clickBtn.addEventListener("change", function () {
-    const generateBtn = document.getElementById("generateNameBtn");
+clickBtn.addEventListener("change", function() {
     generateBtn.addEventListener("click", generateNameAnimal);
 });
 
@@ -41,8 +42,3 @@ function generateNameAnimal() {
         return spiritAnimalNamme.innerText = `${personName}: ${displayAnimal}`
     }
 };
-
-
-
-
-
