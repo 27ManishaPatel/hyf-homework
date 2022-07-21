@@ -1,4 +1,3 @@
-
 //1st Exe: Find the shortest word
 let myDiv = document.getElementById("findShortWord");
 myDiv.style.border = "2px solid black";
@@ -57,18 +56,18 @@ function findDanLetter(x) {
     para.innerText = x
     myDivExe2.appendChild(para);
 
-    const letterÅ = /å/i;
-    const letterÆ = /æ/i;
-    const letterØ = /ø/i;
-    const foundÅ = (x.match(letterÅ) || []).length;
-    const foundÆ = (x.match(letterÆ) || []).length;
-    const foundØ = (x.match(letterØ) || []).length;
-    let total = foundÅ + foundÆ + foundØ;
+    const letterAa = /å/i;
+    const letterAe = /æ/i;
+    const letterAo = /ø/i;
+    const foundAa = (x.match(letterAa) || []).length;
+    const foundAe = (x.match(letterAe) || []).length;
+    const foundAo = (x.match(letterAo) || []).length;
+    let total = foundAa + foundAe + foundAo;
     let result = {
         Total: total,
-        Å: foundÅ,
-        Æ: foundÆ,
-        Ø: foundØ,
+        Å: foundAa,
+        Æ: foundAe,
+        Ø: foundAo,
     }
     let result1 = JSON.stringify(result);
     const displayOutput = document.createElement('p')
@@ -77,9 +76,5 @@ function findDanLetter(x) {
     return result
 }
 
-console.log(findDanLetter(danishString1));// returns {total: 1, å: 1}
-console.log(findDanLetter(danishString2));  // returns {total: 4, æ: 1, ø: 2, å: 1}
-
-
-
-
+console.log(findDanLetter(danishString1)); // returns {total: 1, å: 1}
+console.log(findDanLetter(danishString2)); // returns {total: 4, æ: 1, ø: 2, å: 1}
