@@ -55,13 +55,15 @@ class CanvasArt {
         ctxArt.stroke
     }
 }
-const c12 = new CanvasArt(10, 10, 10, 0, 2 * Math.PI, "#000000");
-//Every 100ms create a new circle instance and draw that to the canvas.
-const c13 = new CanvasArt(100, 10, 10, 0, 2 * Math.PI, "#000000");
-const c14 = new CanvasArt(200, 10, 10, 0, 2 * Math.PI, "#000000");
-c12.draw()
-c13.draw()
-c14.draw()
+//Every 100ms (I made 40ms) create a new circle instance and draw that to the canvas.
+for (let i = 0; i < 300; i++){
+    i += 40;
+    for(let j = 0; j < 200; j++){
+        j += 40
+        const c12 = new CanvasArt(i, j, 10, 0, 2 * Math.PI, "#000000");
+        c12.draw()
+    }
+}
 
 // The circle should have random x, y, radius and color
 const randomCircle = document.getElementById("randomCircle");
