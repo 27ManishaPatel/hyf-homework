@@ -87,21 +87,25 @@ getCurrentPosition()
     })
 
 //Fetching and waiting with Promise
-function getDogsNames() {
+function setTimeoutPromise(time){
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve();
-        }, 3000)
+        }, time)
     })
-}
-getDogsNames()
-    .then(() => {
-        fetch("https://dog.ceo/api/breeds/list/all")
-            .then(Response => Response.json())
-            .then(data => {
-                console.log(Object.keys(data.message))
-            })
-    });
+};
+
+function getDogsNames() {
+    return fetch("https://dog.ceo/api/breeds/list/all")
+};
+
+setTimeoutPromise(3000)
+.then(getDogsNames)
+.then(Response => Response.json())
+.then(data => {
+    console.log(Object.keys(data.message))
+})
+
 //Fetching and waiting with acync and await 
 let image = document.createElement("img");
 image.style.width = "500 px";
