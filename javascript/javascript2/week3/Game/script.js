@@ -34,19 +34,21 @@ btn.addEventListener("click", () => {
 })
 
 function startGame() {
-    document.addEventListener("keypress", (event) => {
-        if (event.code !== "KeyS" && event.code !== "KeyL") {
-            alert("Press either L or S")
-        } else if (event.code === "KeyS") {
-            scoreS.innerHTML = startNUmS++;
-            console.log(event);
-        } else if (event.code === "KeyL") {
-            scoreL.innerHTML = startNUmL++;
-        }
-    });
+    document.addEventListener("keypress", eventGame)
 };
+function eventGame(event){
+    if (event.code !== "KeyS" && event.code !== "KeyL") {
+        alert("Press either L or S")
+    } else if (event.code === "KeyS") {
+        scoreS.innerHTML = startNUmS++;
+        console.log(event);
+    } else if (event.code === "KeyL") {
+        scoreL.innerHTML = startNUmL++;
+    }
+}
 
 function endGame() {
+    document.removeEventListener("keypress", eventGame);
     if (startNUmS === startNUmL) {
         wonSkey.innerHTML = "It's a DRAW!!";
         wonLkey.innerHTML = "It's a DRAW!!";
