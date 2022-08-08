@@ -21,27 +21,42 @@ const blueBoxTarget = boxMove(blueBox, { x: 400, y: 300 });
 const greenBoxTarget = boxMove(greenBox, { x: 400, y: 20 });
 
 async function translateOneByOne() {
-    await moveElement(redBox, redBoxTarget);
-    console.log("moved red Box");
-    await moveElement(blueBox, blueBoxTarget);
-    console.log("moved blue Box");
-    await moveElement(greenBox, greenBoxTarget);
-    console.log("moved green Box");
+    await moveElement(redBox, redBoxTarget).then(()=>{
+        console.log("moved red Box");
+    });
+    
+    await moveElement(blueBox, blueBoxTarget).then(()=>{
+        console.log("moved blue Box");
+    });
+  
+    await moveElement(greenBox, greenBoxTarget).then(()=>{
+        console.log("moved green Box");
+    });
+    
     //back to the original position  
-    await moveElement(redBox, origin);
+    await Promise.all([moveElement(redBox, origin), 
+        moveElement(blueBox, origin), 
+        moveElement(greenBox, origin) ]).then(()=>{
+            console.log("all Boxes moved to it's origin")
+        })
+   /*  await moveElement(redBox, origin);
     console.log("red Box moved to it's origin");
     await moveElement(blueBox, origin);
     console.log("blue Box moved to it's origin");
     await moveElement(greenBox, origin);
-    console.log("green Box moved to it's origin");
+    console.log("green Box moved to it's origin"); */
+    
     // calling all at once function
+
     translateAllAtOnce();
 };
 translateOneByOne();
 
-function translateAllAtOnce() {
-    moveElement(redBox, redBoxTarget);
-    moveElement(blueBox, blueBoxTarget);
-    moveElement(greenBox, greenBoxTarget);
-    console.log("moved all  Boxes together")
+async function translateAllAtOnce() {
+    await Promise.all([moveElement(redBox, redBoxTarget),
+    moveElement(blueBox, blueBoxTarget),
+    moveElement(greenBox, greenBoxTarget)])
+    .then(()=>{
+        console.log("moved all  Boxes together")
+    })
 }
