@@ -68,22 +68,20 @@ document.body.appendChild(currentLocation);
 function getCurrentPosition() {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
-            resolve();
+            navigator.geolocation.getCurrentPosition(position => {
+                resolve(position.coords);
+            })
         } else {
             reject();
         }
     })
 }
 getCurrentPosition()
-    .then(() => {
-        navigator.geolocation.getCurrentPosition(position => {
-            let latitude = position.coords.latitude;
-            let longitude = position.coords.longitude;
-            currentLocation.innerHTML = `Latitude; ${latitude} 
+    .then((data) => {
+            currentLocation.innerHTML = `Latitude; ${data.latitude} 
            <br>
-           Longitude; ${longitude}`
+           Longitude; ${data.longitude}`
         })
-    })
     .catch(() => {
         currentLocation.innerHTML = "Geolocation is not supported by this browser."
     })
