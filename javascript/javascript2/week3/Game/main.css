@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(219, 199, 168);
+}
+
+.game-wrapper {
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgb(94, 76, 76);
+}
+
+@media only screen and (max-width: 1000px) {
+    .game-wrapper {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .game-wrapper {
+        width: 95%;
+        margin-top: 20px;
+    }
+}
+
+.game-heading {
+    font-family: cursive;
+    font-size: 40px;
+    text-shadow: 2px 1px;
+    opacity: 0.7;
+}
+
+.game-wrapper input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(179, 155, 108);
+    box-shadow: 2px 2px 2px 2px rgb(179, 155, 108);
+}
+
+.count-timer {
+    font-size: 30px;
+    border: 1px solid rgb(179, 155, 108);
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    padding-top: 15px;
+}
+
+.game-wrapper button {
+    width: 130px;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: rgb(107, 186, 107);
+    color: white;
+    font-size: 18px;
+    border-style: none;
+    box-shadow: 2px 2px rgb(6, 140, 6);
+}
+
+#content div {
+    width: 50%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#left {
+    margin: 10px;
+    width: 50%;
+    height: 200px;
+    border: 1px solid rgb(179, 155, 108);
+    box-shadow: 5px 5px 5px 5px rgb(179, 155, 108);
+    padding-top: 50px;
+    font-size: 40px;
+    border-radius: 50px;
+}
+
+#right {
+    margin: 10px;
+    width: 50%;
+    height: 200px;
+    border: 1px solid rgb(179, 155, 108);
+    box-shadow: 5px 5px 5px 5px rgb(179, 155, 108);
+    padding-top: 50px;
+    font-size: 40px;
+    border-radius: 50px;
+}
+
+.container-right,
+.container-left {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #right {
+        font-size: 30px;
+    }
+    #left {
+        font-size: 30px;
+    }
+}
+
+canvas {
+    z-index: 1;
+    position: absolute;
+    margin-top: 0;
+}
