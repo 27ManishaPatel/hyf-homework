@@ -18,10 +18,11 @@ class ShoppingCart {
     }
 
     addProduct(product) {
-        this.products.push(product)
+        this.products.push(product);
     }
     removeProduct(product) {
-        this.products = this.products.filter(item => item.name !== product.name)
+        const index = this.products.indexOf(product)
+        this.products.splice(index, 1)
     }
 
     searchProduct(productName) {
@@ -56,7 +57,7 @@ class ShoppingCart {
         fetch(`https://jsonplaceholder.typicode.com/users/${user}`)
             .then(Response => Response.json())
             .then(data => {
-                return data.username
+
                 console.log(data.username)
             })
     }
