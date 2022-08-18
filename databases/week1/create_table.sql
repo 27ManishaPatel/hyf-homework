@@ -52,4 +52,4 @@ SELECT  status.name
 FROM status
 INNER JOIN task ON status.id = task.status_id 
 GROUP BY status.name
-ORDER BY status.name ;
+ORDER BY COUNT(*) DESC ;
