@@ -1,4 +1,4 @@
-//Shopping cart using Classes
+//Shopping    cart using Classes
 const searchInput = document.getElementById("searchInput");
 
 class Product {

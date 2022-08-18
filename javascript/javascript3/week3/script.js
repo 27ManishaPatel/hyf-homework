@@ -1,4 +1,4 @@
-//Lets make some art using classes
+//Lets make    some art using classes
 //Paint a circle to a canvas element
 
 const myCanvas = document.getElementById("myCanvas");
