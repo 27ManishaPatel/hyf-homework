@@ -48,7 +48,7 @@ INNER JOIN task ON status.id = task.status_id
 GROUP BY status.name ;
 
 --10. Get the names of all statuses, sorted by the status with most tasks first
-SELECT  status.name
+SELECT  status.name, COUNT(*)
 FROM status
 INNER JOIN task ON status.id = task.status_id 
 GROUP BY status.name
