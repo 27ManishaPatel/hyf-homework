@@ -1,7 +1,6 @@
 -- Active: 1660903376490@@127.0.0.1@3306@hyf_lesson_1
 
 SELECT * FROM user;
-
 SELECT * FROM task;
 
 SELECT * FROM `user` INNER JOIN task ON user_id = task.user_id;

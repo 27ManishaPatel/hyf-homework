@@ -3,8 +3,7 @@
 --Part 3: More queries
 
 USE hyf_lession_2;
-
---Get all the tasks assigned to users whose email ends in @spotify.com
+--Get all the tasks assigned users whose email ends in @spotify.com
 
 SELECT
     task.title AS 'Task Name',

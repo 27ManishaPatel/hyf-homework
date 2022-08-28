@@ -1,7 +1,6 @@
 -- Active: 1660903376490@@127.0.0.1@3306@hyf_lesson_1
 
 --Part 1: Working with tasks
-
 --Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id
 INSERT INTO
     task (title, description, created, updated, due_date, status_id, user_id)

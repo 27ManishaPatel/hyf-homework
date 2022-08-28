@@ -1,7 +1,6 @@
 -- Active: 1660903376490@@127.0.0.1@3306@Book_Library
 
 CREATE DATABASE Book_Library;
-
 USE Book_Library;
 
 CREATE TABLE
@@ -87,7 +86,7 @@ VALUES (
         '1',
         '	The Grass is Always Greener',
         'Story',
-        'english',
+        'englis',
         '1'
     );
 
