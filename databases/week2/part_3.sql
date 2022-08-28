@@ -26,7 +26,7 @@ FROM user_task
     JOIN user ON user_task.user_id = user.id
     JOIN status ON task.status_id = status.id
 WHERE
-    status.id = 1
+     status.name = "Not started"
     AND user.name = 'Donald Duck';
 
 --Get all the tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
