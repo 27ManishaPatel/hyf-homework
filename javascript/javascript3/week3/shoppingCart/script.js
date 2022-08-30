@@ -1,4 +1,4 @@
-//Shopping cart using Classes
+//Shopping    cart using Classes
 const searchInput = document.getElementById("searchInput");
 
 class Product {
@@ -31,12 +31,8 @@ class ShoppingCart {
     }
 
     getTotal() {
-        const totalPrice = this.products.map(product => product.price);
-        let total = 0;
-        for (let i = 0; i < totalPrice.length; i++) {
-            total += totalPrice[i];
-        }
-        return total;
+        return  this.products.reduce((a, b) => a + b.price, 0)
+        
     }
     renderProducts() {
         const shoppingCart = document.getElementById("shoppingCart");
