@@ -46,11 +46,30 @@ app.get("/documents/:id", (req, res) => {
 
 //POST /search
 
-// app.post("/search", (req, res) => {
-//     const q = req.query.q;
-//     const fields = req.body.fields
+app.post("/search", (req, res) => {
+     const q = req.query.q;
+     const fields = req.body.fields
 
-// })
+     if (fields !== undefined && q !== undefined) {
+        res.status(400).send("Both query parameters and fields parameters can't be provided");
+
+      }else if (fields != undefined) {
+        Object.keys(fields).forEach((key) => {
+          dataSorted = jsonData.filter((x) => x[key] === fields[key]);
+          res.send(dataSorted);
+        });
+       
+      } else if (q != undefined) {
+        jsonData.forEach((obj) => {
+          Object.keys(obj).forEach((objKey) => {
+            if (new String(obj[objKey]).includes(q))
+            res.send(data);
+          });
+        });
+      }else {
+        res.status(400).send("Enter either query parameters or fields parameters!");
+      }
+ })
 
 app.listen(port, () =>{
     console.log(`Listing on port ${port}`)
