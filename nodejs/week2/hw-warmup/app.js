@@ -9,8 +9,9 @@ const jsonData = JSON.parse(json)
 
 const port = process.env.PORT || 3000
 
-// support parsing JSON requests
+// express support parsing JSON requests 
 app.use(express.json())
+
 
 
 app.get('/', (req, res) => {

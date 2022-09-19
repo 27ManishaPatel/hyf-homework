@@ -4,11 +4,13 @@ const knex = require('../database');
 
 const router = express.Router();
 
-// GET /api/snippets
+// GET /api/snippets with get route
 router.get('/', async (req, res) => {
     const snippets = await knex("snippets")
     res.json(snippets)
 });
+
+
 
 //TODO: POST /api/snippets
 router.post("/", async (request, response) => {
