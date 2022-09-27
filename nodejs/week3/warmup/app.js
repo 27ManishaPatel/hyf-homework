@@ -9,7 +9,7 @@ const knex = require("knex")({
       multipleStatements: false, //updated an issue
     },
   })
-  
+  //express
   const express = require("express")
   const app = express()
   const port = process.env.PORT || 3000
