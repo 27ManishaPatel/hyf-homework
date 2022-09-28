@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: rgb(61, 119, 30);
+}
+.wrapper{
+   background-color: aliceblue;
+   margin: auto;
+   margin-top: 20px;
+   width: 50%;
+}
+header{
+    height: 100px;
+    padding-top: 20px;
+    text-align: center;
+}
+footer {
+    height: 100px;
+    text-align: center;
+}
+.to-do-content{
+    text-align: center;
+    height: 400px;
+}
