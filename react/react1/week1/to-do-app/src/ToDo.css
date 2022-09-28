@@ -1,23 +1,31 @@
 body {
     margin: 0;
-    background-color: rgb(61, 119, 30);
+    background-color: rgb(174, 139, 58);
 }
 .wrapper{
-   background-color: aliceblue;
+   background-color: rgb(243, 234, 205);
+   border: 2px solid rgb(134, 77, 8);
+   border-radius: 30px;
    margin: auto;
    margin-top: 20px;
    width: 50%;
+
 }
 header{
+    font-size: 22px;
+    text-shadow: 2px 2px rgb(235, 147, 23);
     height: 100px;
     padding-top: 20px;
     text-align: center;
 }
 footer {
     height: 100px;
+    font-size: 22px;
     text-align: center;
+    text-shadow: 2px 2px rgb(235, 147, 23);
 }
 .to-do-content{
-    text-align: center;
-    height: 400px;
+    font-size: 18px;
+    margin-left: 40px;
+    height: 200px;
 }
