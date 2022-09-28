@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
     }else{
         jsonData.forEach(obj => {
             Object.keys(obj).forEach(objKey => {
-                console.log(new String(obj[objKey]))
                 if(new String(obj[objKey]).includes(q)){
                    res.send(obj)
                 }
@@ -64,7 +63,7 @@ app.post("/search", (req, res) => {
         jsonData.forEach((obj) => {
           Object.keys(obj).forEach((objKey) => {
             if (new String(obj[objKey]).includes(q))
-            res.send(data);
+            res.send(obj);
           });
         });
       }else {
