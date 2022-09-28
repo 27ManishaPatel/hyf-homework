@@ -128,9 +128,8 @@ WHERE created_date BETWEEN '2022-05-22' AND '2022-07-22';
 --Get only specific number of meals fx return only 5 meals
 SELECT * FROM meal
 LIMIT 2;
-SELECT * FROM review;
 --Get the meals that have good reviews
-SELECT meal.title, review.stars AS starts
+SELECT meal.title, review.stars AS stars
 FROM meal
 JOIN review
 ON review.meal_id = meal.id
