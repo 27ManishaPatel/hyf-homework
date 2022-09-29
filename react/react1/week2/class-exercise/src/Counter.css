@@ -1,0 +1,23 @@
+body {
+    margin: auto;
+}
+.counter {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(173, 122, 56);
+    border-radius: 20px;
+    box-shadow: 3px 3px ;
+    padding: 30px;
+}
+.counter h3 {
+    font-size: 40px;
+}
+.counter button {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px ;
+    width: 100px;
+    font-weight: 700;
+}
