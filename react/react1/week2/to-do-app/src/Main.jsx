@@ -18,19 +18,45 @@ const ToDoLists = [
     }
 ];
 
-function ToDoListItems (props) {
-    console.log(props.lists)
-   return <ul>
-   { props.lists.map(list => {
-    return (
-         <li>{list.description} {list.deadline}</li>
-    )
-    })}
-        </ul>
-    }
+
 
 export default function Main() {
     const [listItem, setListItem] = useState(ToDoLists);
+
+    const DeleteList = (id) => {
+        const NewList = listItem.filter(li => li.id !== id)
+        setListItem(NewList)
+    }
+
+    const CheckedList = (id)=> {
+        setListItem(
+            listItem.map(li => {
+                if(li.id === id){
+                    return{
+                        ...li, completed : !li.completed
+                    }
+                }
+                return li
+            })
+        )
+    }
+
+    function ToDoListItems (props) {
+
+        return <ul>
+        { props.lists.map(list => {
+     
+         return (
+              <li key={list.id} className={` list-item ${list.completed ? "completed" : " "}`} >
+                <button onClick={()=> CheckedList(list.id)} className="checked-button"><div className="checked-mark"></div></button>
+                {list.description} {list.deadline} 
+              <button onClick={()=> DeleteList(list.id)} className="delete-button">Delete</button>
+              </li>
+         )
+         })}
+             </ul>
+         }
+
     const AddList = ()=>{
         const ArrayLength = listItem.length
         const NewListName = {
