@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
+  var now = new Date();
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    var today = now.getFullYear() + "-" + month + "-" + day;
 
 export default function Main() {
     const [listItem, setListItem] = useState([]);
     const [input, setInput] = useState('');
     const [update, setUpdate] = useState('')
-   
-    var now = new Date();
-    var day = ("0" + now.getDate()).slice(-2);
-    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-    var today = now.getFullYear() + "-" + month + "-" + day;
     const [deadline, setDeadline] = useState(today)
 
     const DeleteList = (id) => {
