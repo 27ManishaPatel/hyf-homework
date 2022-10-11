@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  background-color: rgb(174, 139, 58);
+}
+header {
+  font-size: 22px;
+  text-shadow: 2px 2px rgb(235, 147, 23);
+  padding-top: 20px;
+  text-align: center;
+}
+.timer-text{
+  font-size: 24px;
+  text-shadow: 1px 1px rgb(235, 147, 23);
+}
+
+.wrapper{
+ background-color: rgb(243, 234, 205);
+ border: 2px solid rgb(134, 77, 8);
+ border-radius: 30px;
+ margin: auto;
+ margin-top: 20px;
+ width: 70%;
+
+}
+.to-do-content{
+  font-size: 18px;
+  margin-left: 40px;
+  position: relative;
+  width: 90%;
+}
+
+form label {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 40px;
+}
+form input {
+  width: 50%;
+  height: 30px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(134, 77, 8);
+  border-radius: 10px;
+  font-size: 20px;
+  left: 0%;
+}
+.add-button{
+  margin-left: 22%;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 2px solid rgb(134, 77, 8);
+  border-radius: 10px;
+  text-shadow: 1px 1px rgb(235, 147, 23);
+}
+.update-input{
+  width: 40%;
+  height: 30px;
+  margin-left: 20%;
+  margin-bottom: 10px;
+  border: 2px solid rgb(134, 77, 8);
+  border-radius: 10px;
+  font-size: 20px;
+  left: 0%;
+}
+.button{
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(134, 77, 8);
+  border-radius: 6px;
+  text-shadow: 1px 1px rgb(235, 147, 23);
+}
+
+
+.checked-button{
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-style: none;
+  border-radius: 6px;
+  background-color: rgb(243, 223, 188);
+}
+.checked-button:hover {
+  background-color:  rgb(232, 178, 111);
+  }
+.checked-mark{
+  border-bottom: 3px solid rgb(134, 77, 8);
+  border-right:  2px solid rgb(134, 77, 8);
+  transform: rotate(40deg);
+  width: 10px;
+  height: 15px;
+}
+.list-item{
+  list-style: none;
+  margin-bottom: 8px;
+  font-size: 20px;
+  background-color: rgb(234, 189, 134);
+  border:  none;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px  rgb(205, 124, 25);
+}
+.message{
+  background-color: rgb(234, 189, 134);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(205, 124, 25);
+  padding: 5px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  color: rgb(173, 54, 54);
+}
+.completed {
+  text-decoration: line-through;
+}
+.delete-button{
+  width: 40px;
+  height: 30px;
+  font-size: 30px;
+  border: none;
+  background-color:rgb(243, 223, 188);
+  /* border:  2px solid rgb(112, 63, 3); */
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+}
+.delete-button:hover {
+background-color:  rgb(234, 203, 164);
+}
+.edit-button{
+  width: 80px;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+  background-color:rgb(243, 223, 188);
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0.3%;
+}
+.edit-button:hover {
+  background-color:  rgb(234, 203, 164);
+  }
+
+
+footer {
+  height: 100px;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 2px 2px rgb(235, 147, 23);
+}
