@@ -6,7 +6,7 @@ INSERT INTO
     task (title, description, created, updated, due_date, status_id, user_id)
 VALUES ("HackYourFuture", "to be a fullstack webdeveloper", "2022-04-22", "2022-08-21", "2022-12-20", 2, 1);
 
---Change the title of     a task
+--Change the title of a task
 UPDATE task
 SET task.title = "HYF"
 WHERE task.id = 36;
@@ -56,3 +56,7 @@ ON student(s_name);
 --Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished (hint: enumerations).
 ALTER TABLE `Class` 
 ADD status ENUM('not-started', 'ongoing', 'finished') NOT NULL;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main

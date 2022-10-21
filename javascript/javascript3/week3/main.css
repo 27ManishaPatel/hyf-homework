@@ -1,0 +1,24 @@
+#myCanvas {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+
+#myCanvasCircle {
+    margin-top: 20px;
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#canvasArt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 900px;
+    border: 1px solid black;
+}
+
+#randomCircle {
+    border: 1px solid black;
+}

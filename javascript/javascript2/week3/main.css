@@ -1,0 +1,19 @@
+#map {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 400px;
+    background-color: grey;
+
+
+}
+
+#dblclick-div {
+    border: 1px solid black;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(180, 244, 244);
+}

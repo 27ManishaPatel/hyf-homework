@@ -1,0 +1,12 @@
+.user-name {
+    font-size: 24px;
+    padding-bottom: 10px;
+    background-color: bisque;
+    color: rgb(61, 61, 133);
+}
+
+.users-repo-url { 
+    font-size: 18px;
+    padding-top: 5px;
+    color: rgb(13, 13, 23);
+}
