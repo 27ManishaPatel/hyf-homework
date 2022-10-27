@@ -20,6 +20,7 @@ const SearchUser = () => {
             const response = await fetch(`https://api.github.com/search/users?q=${input}`)
             const jsonData = await response.json()
             const data = await jsonData.items
+            console.log(data)
             if(data.message){
                 setError(data.message);
                 setResult([])
