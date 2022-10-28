@@ -4,7 +4,6 @@ import SearchUser from './SearchUser';
 import SearchProvider from './UserContext';
 
 import RepoOfHyf from './Repos'
-import ReposProvider from './ReposContext';
 
 
 function App() {
@@ -18,12 +17,10 @@ function App() {
       </div>
       <div className="container">
         <h1>HYF - Repos</h1>
-        <ReposProvider>
+        <SearchProvider>
           <RepoOfHyf />
-        </ReposProvider>
+        </SearchProvider>
       </div>
-
-
     </div>
   );
 }

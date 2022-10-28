@@ -1,9 +1,16 @@
-import { useContext } from 'react';
-import { ReposContext } from './ReposContext'
+import { useContext} from 'react';
+import { SearchContext } from './UserContext'
 
 
 const RepoOfHyf = () => {
-    const { repos } = useContext(ReposContext)
+    const { repos, setRepos } = useContext(SearchContext)
+
+        fetch('https://api.github.com/users/HackYourFuture-CPH/repos')
+        .then(res => res.json())
+        .then(data => {
+            setRepos(data)
+        });
+ 
     const hyfRepo = repos.map(repo => {
         return (<li key={repo.id}> 
         <a href={repo.html_url}>{repo.name}</a>

@@ -1,4 +1,3 @@
-
 import { createContext, useState } from "react";
 export const SearchContext = createContext();
 
@@ -7,6 +6,7 @@ const SearchProvider = ({ children }) => {
     const [loading,setLoading] = useState(false);
     const [error,setError] = useState("");
     const [result,setResult] = useState([]);
+    const [repos, setRepos] = useState([])
 
     return(
     <SearchContext.Provider value={{
@@ -17,7 +17,9 @@ const SearchProvider = ({ children }) => {
          error,
          setError,
          result,
-         setResult
+         setResult,
+         repos,
+         setRepos
     }}>{children}</SearchContext.Provider>
     );
 };
