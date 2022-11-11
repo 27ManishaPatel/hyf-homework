@@ -2,3 +2,4 @@ Potatoes
 Tomatoes
 Carrot
 Onion
+Cabbage
