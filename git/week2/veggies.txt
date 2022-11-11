@@ -1,5 +1,7 @@
 Potatoes
 Tomatoes
-Carrot
+Carrots //modified
 Onion
 Cabbage
+Broccoli //added
+Chilli // added
