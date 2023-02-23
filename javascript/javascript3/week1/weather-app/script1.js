@@ -32,7 +32,6 @@ btn.addEventListener("click", function() {
                 .then(response => response.json())
                 .then(data => {
                     display(searcheName, data)
-                    console.log(data)
                 });
         }
     })
@@ -47,7 +46,6 @@ const display = (searcheName, data) => {
     wind.innerHTML = data.wind.speed;
     sunrise.innerHTML = `Sunrise at ${new Date(data.sys.sunrise*1000).getHours()} : ${new Date(data.sys.sunrise*1000).getMinutes()}`
     sunset.innerHTML = `Sunset at ${new Date(data.sys.sunset*1000).getHours()} : ${new Date(data.sys.sunset*1000).getMinutes()}`
-    console.log(data)
 }
 
 function initMap() {
@@ -63,7 +61,7 @@ function initMap() {
                 position: { lat: latitude, lng: longitude },
                 map: map,
             });
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=66fa0f600aeb3e00b5df455da61d2af3`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=0f8c88146a435b8db9d6af1cacbbc02a`)
                 .then(response => response.json())
                 .then(data => {
                     searchPlace.innerHTML = `Weather in ${data.name}`
